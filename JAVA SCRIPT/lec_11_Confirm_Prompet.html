@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <h1>Prompt And Confirm </h1>
+    <div class="div"></div>
+
+    <button id="btn">LogOut</button>
+
+
+    <script>
+        let prom = prompt("Enter Any Value");
+        console.log(prom);
+
+        //   document.querySelector("div").innerText=prom;
+
+        if (prom == null) {
+            document.querySelector("div").append("Enter A Valid Number !");
+        }
+        else {
+            document.querySelector("div").append(prom * prom);
+            //   document.querySelector("div").innerText= "@" + prom + prom.length;
+        }
+
+        // if (prom==null) {
+        //     document.querySelector(".div")
+        //     .innerText="Enter A Valid Number";
+
+        // } else {
+        //     document.querySelector(".div").innerText=(prom*prom);
+        // }
+
+        let conf = document.querySelector("button");
+
+        conf.addEventListener("click", () => {
+
+            let con = confirm("Are You Want To LogOut This Page");
+
+            if (con==true)
+            {
+                alert("Login Sucssesfully");
+            } 
+            else
+            {
+                alert("Logout Cancelled");
+            }
+        })
+        
+    </script>
+</body>
+
+</html>

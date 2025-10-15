@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.3.7/bootstrap-5.3.7/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <h3>Row & Column In Booststrap</h3>
+
+    <div class="container border border-2 border-danger">
+        <div class="row bg-primary border border-2 border-info p-1">
+            <div class="col border border-2">1 Column</div>
+            <div class="col border border-2">2 Column</div>
+            <div class="col border border-2">3 Column</div> <!-- container class set max width for each break points -->
+            <div class="col border border-2">4 Column</div> <!-- max 12 columns are insert in 1 row -->
+            <div class="col border border-2">5 Column</div>
+            <div class="col border border-2">6 Column</div>
+            <div class="col border border-2">7 Column</div>
+            <div class="col border border-2">8 Column</div>
+            <div class="col border border-2">9 Column</div>
+            <div class="col border border-2">10 Column</div>
+            <div class="col border border-2">11 Column</div>
+            <div class="col border border-2">12 Column</div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row border border-2 border-info mt-1 p-1">
+            <div class="col border border-1 border-dark">Column1</div>
+            <div class="col border border-1 border-dark">Column1</div>
+            <div class="col border border-1 border-dark">Column1</div><!-- container fluid set 100% width -->
+            <div class="col border border-1 border-dark">Column1</div>
+            <div class="col border border-1 border-dark">Column1</div>
+        </div>
+    </div>
+
+    <h2>Verticle alighn</h2>
+    <div class="container m-5 bg-warning" style="height: 500px;">
+        <div class="row border border-1 border-primary  align-items-center  " style=" height: 400px;">
+            <div class="col align-self-end border border-1 m-1 border-danger h-25">column 1</div>
+            <div class="col align-self-center border border-1 m-1 border-danger h-25">column 1</div>
+            <div class="col align-self-start border border-1 m-1 border-danger h-25">column 1</div>
+            <div class="col border border-1 m-1 border-danger h-25">column 1</div>
+            <div class="col border border-1 m-1 border-danger h-25">column 1</div>
+        </div>
+    </div>
+
+    <h2>Horizontal alighn</h2>
+    <div class="container   bg-warning " style="height: 600px;" width: 100%;>
+        <div class="row justify-content-center border border-1 border-primary" style=" height: 200px;width: 100%;">
+            <div class="col-1  border border-1 border-danger h-25">column 1</div>
+            <div class="col-1  border border-1  border-danger h-25">column 1</div>
+            <div class="col-1  border border-1  border-danger h-25">column 1</div>
+            <div class="col-1  border border-1  border-danger h-25">column 1</div>
+            <div class="col-1  border border-1  border-danger h-25">column 1</div>
+        </div>
+
+        <div class="row justify-content-evenly border border-1 border-primary" style=" height: 200px; width: 100%;">
+            <div class="col-1  border border-1 m-1 border-danger h-25">column 1</div>
+            <div class="col-1 border border-1 m-1 border-danger h-25">column 1</div>
+            <div class="col-1 border border-1 m-1 border-danger h-25">column 1</div>
+            <div class="col-1 border border-1 m-1 border-danger h-25">column 1</div>
+        </div>
+
+        <div class="row justify-content-end border border-1 border-primary" style=" height: 200px;width: 100%;">
+            <div class="col-1 border border-1 m-1 border-danger h-25">column 1</div>
+            <div class="col-1 border border-1 m-1 border-danger h-25">column 1</div>
+            <div class="col-1 border border-1 m-1 border-danger h-25">column 1</div>
+            <div class="col-1 border border-1 m-1 border-danger h-25">column 1</div>
+        </div>
+    </div>
+
+    <h2>Break Point</h2>
+
+    <div class="container  bg-warning  "> <!-- 768px thse etle col widht md break point na hisab thi set thai jse -->
+        <div class="row  border border-1 border-primary p-1">
+            <div class="col-6 col-md-2 border border-1  border-danger h-25">column 1</div>
+            <div class="col-6 col-md-3 border border-1   border-danger h-25">column 1</div>
+            <div class="col-6 col-md-3 border border-1   border-danger h-25">column 1</div>
+            <div class="col-6 col-md-2 border border-1   border-danger h-25">column 1</div>
+        </div>
+    </div>
+
+
+    <h2>reordring</h2>
+    <div class="container  bg-warning  "><!-- 768px thse etle order md break point na hisab thi set thai jse -->
+        <div class="row  border border-1 border-primary p-1">
+            <div class="col-2 order-md-4 border border-1  border-danger h-25">column 1</div>
+            <div class="col-2 order-md-3 border border-1   border-danger h-25">column 2</div>
+            <div class="col-2 order-md-2 border border-1   border-danger h-25">column 3</div>
+            <div class="col-2 order-md-1 border border-1   border-danger h-25">column 4</div>
+        </div>
+    </div>
+
+    <h2>offset</h2>
+    <div class="container  bg-warning  "><!-- 768px thse etle order md break point na hisab thi set thai jse -->
+        <div class="row border border-1 border-primary p-1">
+            <div class="col-1  border border-1  border-danger h-25">column 1</div>
+            <div class="col-1  border border-1  border-danger h-25">column 2</div>
+            <div class="col-1  border border-1  border-danger h-25">column 3</div>
+            <div class="col-1  border border-1  border-danger h-25">column 4</div>
+            <div class="col-1  border border-1  border-danger h-25">column 5</div>
+            <div class="col-1  border border-1  border-danger h-25">column 6</div>
+            <div class="col-1  border border-1  border-danger h-25">column 7</div>
+            <div class="col-1  border border-1  border-danger h-25">column 8</div>
+            <div class="col-1  border border-1  border-danger h-25">column 9</div>
+            <div class="col-1  border border-1   border-danger h-25">column 10</div>
+            <div class="col-1  border border-1   border-danger h-25">column 11</div>
+            <div class="col-1 offset-2   border border-1   border-danger h-25">column 12</div>
+        </div>
+
+        <div class="row   border border-1 border-primary p-1">
+            <div class="col-2  border border-1  border-danger h-25">column 3</div>
+            <div class="col-2  border border-1  border-danger h-25">column 3</div>
+            <div class="col-2 offset-2  border border-1  border-danger h-25">column 4</div>
+            <div class="col-1  border border-1  border-danger h-25">column 4</div>
+            <div class="col-1  border border-1  border-danger h-25">column 4</div>
+        </div>
+
+    </div>
+           
+    <p>Lorem ipsum dolor sit amet.</p>
+</body>
+
+</html>

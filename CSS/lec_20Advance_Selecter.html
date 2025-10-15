@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Css</title>
+    <style>
+        a[target] {
+            /* target */
+            color: red;
+            display: block;
+            text-decoration: none;
+        }
+
+        a[target="_blank"] {
+            /* target="_blank" */
+            background-color: yellow;
+            border: 2px solid black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        p[class~="flower"] {
+            /* any word */
+            text-decoration: underline;
+        }
+
+        p[class|="flower"] {
+            /* first letter */
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        p[class^="f"] {
+            /* first letter */
+            border: 2px solid green;
+            padding: 10px;
+
+
+        }
+
+        p[class$="top"] {
+            /* last letter */
+            margin: 10px;
+            background-color: lightblue;
+
+        }
+
+        p[class*="flower"] {
+            /* any letter */
+            font-size: 15px;
+            color: darkred;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Advance Css</h2>
+
+    <a href="https://www.facebook.com" target="_blank">Facebook</a>
+    <a href="https://www.google.com" target="_blank">Google</a>
+    <a href="https://www.linkedin.com" target="_blank">Linkdin</a>
+    <a href="https://www.youtube.com" target="_blank">YouTube</a>
+
+
+    <p class="flower-top">Lotues is best flower</p>
+    <p class="flower-top">Rose is best flower</p>
+    <p class="flower-top">Chmeli is best flower</p>
+    <p class="flower-top">Genda is best flower</p>
+    <p class="flower-top">Champa is best flower</p>
+</body>
+
+</html>

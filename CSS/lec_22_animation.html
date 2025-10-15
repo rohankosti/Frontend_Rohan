@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Css</title>
+    <style>
+        .box {
+            height: 300px;
+            width: 300px;
+            /* margin-top: 50; */
+            text-align: center;
+            line-height: 300px;
+            background-color: lightblue;
+            animation-name: example;
+            animation-duration: 2s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.08, -0.02, 0, 0.96);
+            border-radius: 50%;
+            outline: 15px groove rgb(6, 164, 243);
+            outline-offset: 15px;
+            
+        }
+
+        @keyframes example {
+            from {
+                transform: translate(0%)rotate(0deg);
+                background-color: chartreuse;
+                color: fuchsia;
+                outline-color: navy;
+            }
+
+            to {
+                transform: translate(400%)rotate(360deg);
+                background-color: dodgerblue;
+                color: darkred;
+                outline-color: salmon;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Animation Css</h1>
+
+    <div class="box">Rohan Koshti !</div>
+
+</body>
+
+</html>

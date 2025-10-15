@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Event Example</title>
+  <style>
+    .red {
+      background-color: red;
+    }
+
+    .box1 {
+      width: 200px;
+      height: 200px;
+      background-color: blueviolet;
+      color: white;
+    }
+
+    .box2 {
+      width: 200px;
+      height: 200px;
+      background-color: forestgreen;
+      color: white;
+    }
+    .box3{
+      background-color: magenta;
+      color: darkred;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- JavaScript में events ऐसे actions या occurrences होते हैं जो browser में होते हैं, जैसे:
+
+User actions – क्लिक करना, माउस हिलाना, कीबोर्ड दबाना  -->
+  
+  <!--
+   onclick
+  dblckick
+  Mouseover
+  keyup
+  keydown
+  submit -->
+
+
+  <div id="box" class="red">Hello Rohan Koshti !.....</div>
+
+  <!-- Click -->
+  <button onclick="document.getElementById('box').classList.add('box1')">Click Me</button>
+
+  <!-- Double Click Example -->
+  <div class="db_click" ondblclick="document.getElementById('box').classList.add('box2')">
+    ThIS IS A DUBBLE CLICK......!
+  </div>
+
+  <!-- Mouseover Example -->
+   <div class="mouse" onmouseover="document.getElementById('box').classList.add('box3')">THIS IS A MOUSEOVER</div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+     <style>
+        .body{
+            background-color: blueviolet;
+            color:chartreuse;
+        }
+     </style>
+<body>
+
+    <h1>Set And Get Method</h1>
+
+    <div class="container">
+         <a href="https://www.google.com/" target="_blank">Google</a>
+        <div class="box">this is a box 1</div>
+        <div class="box">this is a box 1</div>
+        <div class="box">this is a box 1</div>
+        <div class="box">this is a box 1</div>
+    </div>
+
+    <script src="J_QUERY.js/jquery.js"></script>
+    <button >Click Me</button>
+    <script>
+        let div = $(".container").first();
+        console.log(div.text());
+        console.log(div.attr("class"));
+        div.css({
+            "background-color": "royalblue",
+            "width": "100%",
+            "height": "300px",
+            "color": "white",
+            "border": "2px solid black",
+            "display": "flex",
+            "text-align": "center",
+
+        })
+
+        let all = $(".box").css({
+            "background-color": "magenta",
+            "width": "250px",
+            "height": "250px",
+            "color": "white",
+            "border": "2px solid black",
+            "margin": "auto",
+            "text-align": "center",
+
+        })
+        console.log(all.html("<img src='Git_Hub.jpeg' width:10px >"));
+         all=$("img").css({
+             "width": "250px",
+            "height": "250px",
+         });
+
+
+         let a=$("a");
+            console.log(a.text());
+         console.log(a.attr("href"));
+
+         a=$("a").attr("href","https://youtube.com/");
+                  console.log(a.text("YOUTUBE"));
+            console.log(a.attr("href"));
+
+       
+
+             
+    </script>
+</body>
+
+</html>

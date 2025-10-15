@@ -1,0 +1,262 @@
+* {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            background-color:  whitesmoke;;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+            /* color: whitesmoke; */
+            height: 60px;
+            width: 1540px;
+            padding-top: 30px;
+            position: fixed;
+
+        }
+
+        ul {
+            text-align: right;
+            /* padding: auto; */
+        }
+
+        li {
+            display: inline-block;
+            margin-right: 20px;
+            /* padding: auto; */
+            /* text-align: right; */
+
+        }
+
+        a {
+
+            text-decoration: none;
+            color: black;
+             /* color: rgb(255, 255, 255); */
+            font-family: Verdana, sans-serif;
+            padding: 2px;
+            /* margin-right: 100px;  */
+            /* word-spacing: 2px; */
+            /* padding: auto; */
+
+        }
+
+
+        a:hover {
+            background-color: rgba(126, 125, 125, 0.61);
+        }
+
+        .span {
+            display: inline-block;
+            margin-right: 1100px;
+            /* padding: auto; */
+        }
+
+        .img {
+            width: 1500px;
+            margin-right: 10px;
+            margin-left: 10px;
+
+        }
+
+        .p {
+            color: white;
+            text-align: center;
+            margin-left: -2%;
+            margin-top: -416px;
+            font-size: 53px;
+        }
+
+        .b {
+            height: 90px;
+            width: 60px;
+            padding: 20px;
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            background-color: #060505c9;
+            text-align: center;
+
+        }
+
+        .Project {
+            margin-top: 400px;
+            font-size: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-left: 20px;
+            line-height: 70px;
+        }
+
+        .alldiv {
+            display: inline-block;
+            /* border: 2px solid black; */
+            margin-top: 30px;
+        }
+
+        .divimg {
+            height: 235px;
+            padding: 5px;
+            margin-left: 7px;
+            /* display: inline-block; */
+
+        }
+
+        .imgp {
+            position: absolute;
+            margin-bottom: -77px;
+            padding: 10px;
+            height: 40px;
+            width: 175px;
+            background-color: black;
+            color: white;
+            margin-left: 12px;
+            font-size: 18px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .about {
+
+            margin-top: 40px;
+            font-size: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-left: 20px;
+            line-height: 70px;
+
+        }
+
+        .divpara {
+            font-size: 18px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-left: 20px;
+            text-align: justify;
+        }
+
+        .para {
+            margin-right: 20px;
+            text-align: justify;
+        }
+
+        #div {
+            margin-top: 10px;
+        }
+
+        .parad {
+            font-size: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-left: 20px;
+            padding: 10px;
+
+        }
+
+        .para1 {
+            color: rgb(29 15 15);
+            font-size: 15px;
+            margin-left: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 10px;
+        }
+
+        .para2 {
+            color: rgb(29 15 15);
+            font-size: 15px;
+            margin-left: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            width: 322px;
+            padding: 10px;
+
+        }
+
+        .btn {
+            background-color: #e6caca0d;
+            color: black;
+            font-size: 20px;
+            margin-left: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 10px;
+            text-align: center;
+            width: 340px;
+            height: 50px;
+
+        }
+
+        .btn:hover {
+            background-color: #b0acac;
+        }
+
+        .contact {
+
+            font-size: 25px;
+            font-weight: normal;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-left: 20px;
+            line-height: 122px;
+
+        }
+
+        .paracontact {
+            font-size: 15px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+        .form {
+            margin: 30px;
+            /* border: 2px solid black; */
+        }
+
+        .formnam {
+            display: block;
+            border: 1px solid black;
+            padding: 14px;
+            margin: 15px;
+            height: 50px;
+            width: 100%;
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 15px;
+
+        }
+
+        .formbtn {
+            background-color: black;
+            color: white;
+            height: 60px;
+            width: 194px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            padding: 13px;
+            margin: 20px;
+
+        }
+
+        .footer_img {
+            width: 1500px;
+            margin-right: 10px;
+            margin-left: 10px
+        }
+
+        .footer {
+            height: 100px;
+            width: 100%;
+            background-color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 15px;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 10px;
+        }
+
+        .topm {
+            float: right;
+            background-color: #4b4b4b00;
+            height: 45px;
+            width: 115px;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 15px;
+            color: white;
+        }

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List In Css</title>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        ol {
+            background-color: chocolate;
+            color: white;
+            height: 80px;
+            width: 97.4%;
+            list-style-type: none;
+            font-size: 18px;
+            font-family: Georgia, 'Times New Roman', serif;
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid white;
+            
+        }
+
+        
+        li {
+            text-decoration: none;
+            padding-top: 10px;
+            /* color: rgb(175, 18, 18); */
+        }
+
+        li:hover {
+            color: rgb(255, 9, 1);
+        }
+
+        a:link,
+        li:link {
+            color: rgb(18, 130, 175);
+        }
+
+        a:visited,
+        li:visited {
+            color: rgb(18, 175, 78);
+        }
+
+        a:active,li:active{              /*   (you click on link then link color can be chnge) */
+        color: rgb(162, 18, 175);
+         }
+    </style>
+</head>
+
+<body>
+    <h3>Using List Create A Navbar</h3>
+    <ol>
+        <a href="https://www.google.co.in/" target="_blank">
+            <li>google</li>
+        </a>
+        <a href="https://www.facebook.com/">
+            <li>facebook</li>
+        </a>
+        <a href="https://www.linkedin.com/">
+            <li>linkdin</li>
+        </a>
+        <a href="https://www.codewithharry.com/">
+            <li>codewithharry</li>
+        </a>
+        <a href="https://fonts.google.com/">
+            <li>google font</li>
+        </a>
+    </ol>
+</body>
+
+</html>

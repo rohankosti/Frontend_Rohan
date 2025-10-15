@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Properties</title>
+</head>
+
+<body>
+
+      <h1>Hello world</h1>
+       <a id="link" href="www.google.com">Google</a>
+
+
+        <p>Then Change the any attribute in html then use getAttribute And setAttribute Method</p>
+    <p>Then Chnage the HTML Content Using innerHTML And innerTEXT Method</p> 
+
+       <input type="submit" value="" name="" placeholder="Enter Your Text">
+
+    <input id="input" type="text" placeholder="Enter your name">
+
+
+    <!-- Set And Get Method Example -->
+   
+
+    <script>
+        // let h1 = document.getElementById("input")
+        // h1.setAttribute("type", "email");
+        // h1.setAttribute("placeholder", "Enter your email");
+        // console.dir(h1);
+        // console.log(h1);
+
+
+        // let Get= document.querySelector("input").getAttribute("type");
+        //    Get.getAttribute("placeholder");
+        //    console.log(Get);
+        // console.log(Get);
+
+            // let link =document.getElementById("link").getAttribute("href");
+            // console.log(link);   get data
+
+            // let set =document.getElementById("link");
+            // set.querySelector("#link");
+            // set.innerText="YouTube";
+            // set.setAttribute("href","https://www.youtube.com");
+            // console.log(set);
+       
+
+
+            let inputs= document.getElementsByTagName("input")[0].getAttribute("type")
+            console.log(inputs);
+
+            let inputset =document.querySelector("input")
+            inputset.setAttribute("placeholder","Enter Your Email");
+               inputset.setAttribute("type","email");
+                 inputset.setAttribute("name","email");
+            console.log(inputset);
+
+
+
+    </script>
+</body>
+
+</html>

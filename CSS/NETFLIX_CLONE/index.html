@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETFLIX CLONE</title>
+    <link rel="stylesheet" href="style.css">
+    
+
+    <link rel="shortcut icon"
+        href="data:image/png;base64,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"
+        type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Nosifer&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+
+<body>
+
+
+    <nav>
+        <!-- Nav Area Start -->
+        <div class="nav" data-aos="fade-left" data-aos-duration="1000">
+            <div class="nav_logo">
+                <img src="https://raw.githubusercontent.com/CodeWithHarry/Sigma-Web-Dev-Course/b0acb01fa88ae0753ef903b8fc45fadb5efe1c2b/Video%2053/assets/images/logo.svg"
+                    alt="Logo_Img" width="140px">
+            </div>
+            <div class="menu">
+                <div class="language">
+                    <a href="#"> English</a>
+                </div>
+                <div class="sign_up">
+                    <a href="#"> Sign In</a>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Area End -->
+    </nav>
+
+    <section>
+        <!-- Hero Area Start -->
+        <div class="hero" data-aos="fade-right" data-aos-duration="1000">
+            <div class="img_overlay"></div>
+            <div class="hero_img">
+                <img src="https://assets.nflxext.com/ffe/siteui/vlv3/05e91faa-6f6d-4325-934e-5418dcc2567b/web/IN-en-20250630-TRIFECTA-perspective_159086b1-425f-435b-bcd5-1ed8039cdef9_large.jpg"
+                    alt="hero_img">
+            </div>
+        </div>
+        <!-- Hero Area End -->
+    </section>
+
+    <section>
+        <!-- Hero Text Area Start -->
+        <div class="hero_text_area" data-aos="fade-right" data-aos-duration="1000">
+            <div class="hero_text_h1">
+                <h1>Unlimited movies, TV shows and more
+
+                </h1>
+            </div>
+            <div class="hero_text_h3">
+                <h3>Starts at ₹149. Cancel at any time.</h3>
+            </div>
+            <div class="hero_text_p">
+                <p>Ready to watch? Enter your email to create or restart your membership.</p>
+            </div>
+        </div>
+        <!-- Hero Text Area End -->
+    </section>
+
+
+    <!-- Hero Area form Start -->
+    <section>
+        <div class="hero_form" data-aos="fade-up" data-aos-duration="1000">
+            <form action="" method="post">
+                <!-- <label for="">Email</label> -->
+                <input type="text" name="email" id="email" value="" placeholder="Ex@gmail.com">
+                <button class="btn"><input type="submit" value="Get Started"></button>
+            </form>
+        </div>
+    </section>
+    <!-- Hero Area form End -->
+    <hr class="hr">
+
+    <!-- Box Scroll Img Section Start -->
+    <section>
+        <div class="box_scrol_img_section" data-aos="fade-up" data-aos-duration="1000">
+            <div class="box_scrol_h1">
+                <h1>Trending Now</h1>
+            </div>
+            <div class="box_scrol_img">
+                <div class="img" data-aos="zoom-in" data-aos-duration="800">
+                    <img
+                        src="https://occ-0-4875-2164.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABaW57jWqw0Gs9gqgmW816THwyNfPqphIiruQRFy9KXtt9PTPJpB4kzDKriPcpNjPKCj0itu1Yfjl-CR8rGEokBHPKE4O9lZQHXHRRpUHEelwoKk8lOf4gqlws-HnR2iZeSk4.webp?r=609">
+                </div>
+
+                <div class="img" data-aos="zoom-in" data-aos-duration="800">
+                    <img src="https://occ-0-2164-1009.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABfCROlI6IfjK9RhwYL2MkqaHIQirEerktjd8rFh5s3bhCQ6zjc34-ltZ_aQtZeKTMIZCtxyRVivziXtTSCfK023PCDjrhdC6xVHMxRoHUomh8YDBJht3pmrywdQVenWZQvxY.webp?r=c60"
+                        alt="img_1">
+                </div>
+
+                <div class="img" data-aos="zoom-in" data-aos-duration="800">
+                    <img src="https://occ-0-2164-1009.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABU73BvQjJgydQFEJ-vZZw9QtO8fL6lIxc71x9tOqxgDWh_BHokCWPIbGC5AxJjDk0D_sIH5KhmmYm9HLr3DKUXg8eo6nzF0rtSI.webp?r=d95"
+                        alt="img_1">
+                </div>
+
+                <div class="img" data-aos="zoom-in" data-aos-duration="800">
+                    <img src="https://occ-0-2164-1009.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABYUCgDPIk4LvnEw_j-dC5ca65oxm4yP2Z7RFKlRcN6WYzCwNA4MhTNqTRrSAK9zND3cSjrYEpbQculmTCXPD09ZbvdCosdbuOjc.webp?r=062"
+                        alt="img_1">
+                </div>
+
+                <div class="img" data-aos="zoom-in" data-aos-duration="800">
+                    <img src="https://occ-0-2164-1009.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABcH5_XDKPeXszDIKUeRk9f8gbZf2IIH_vdf4CNwOb7kql21x-tuHFIQn1NVGFCzD79WrtEa2YEWqbSqJAs8AAOymvo6mcwfQlFM.webp?r=e74"
+                        alt="img_1">
+                </div>
+
+                <div class="img" data-aos="zoom-in" data-aos-duration="800">
+                    <img src="https://occ-0-2164-1009.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABWtQdcUd4n6VKz6HTm_IbI2cOq0VDU7fDQpomIXBLuCYqtJ4j8hj2pz7j6spnX2osjRgTMJQ9xkMieYZWqC6xC8G4tGlTLJBm3I.webp?r=cc2"
+                        alt="img_1">
+                </div>
+
+                <div class="img" data-aos="zoom-in" data-aos-duration="800">
+                    <img src="https://occ-0-2164-1009.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABYGL4_ns5MGTE5-Yd3ZQVB5apyY9yxQ39lxjT_27ehdoGzrxRwNc4osgXEeifcv9yO_MgMySL-p6hMxtQZnIEkZmyglIJ7wm7ik.webp?r=c23"
+                        alt="img_1">
+                </div>
+
+                <div class="img" data-aos="zoom-in" data-aos-duration="800">
+                    <img src="https://occ-0-2164-1009.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABZ2Btia34ViHOdbGThR2xD0XYVD9vkdTkUULeET8PcHeq12ebMOJyLaTD1yS26NaRfUqDMknk2XnomOCg78WEKeN3VEDdOKzFRayBGveEZ-MeOaVD-v0z5P25idICKgt-nXX.webp?r=a1c"
+                        alt="img_1">
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <!-- Firsht Section Start -->
+    <section>
+        <div class="firsht_section">
+            <div class="firsht_section_area" data-aos="fade-right" data-aos-duration="1200">
+                <div class="firsht_section_text_area">
+                    <h1>Enjoy on your TV</h1>
+                    <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+                </div>
+                <div class="firsht_section_img_area">
+                    <img src="tv-removebg-preview.png" alt="">
+                    <video src="video-tv-in-0819.m4v" muted loop autoplay></video>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!-- Firsht Section End -->
+
+    <!-- Second Section Start -->
+    <section>
+        <div class="second_section">
+            <div class="second_section_area" data-aos="fade-left" data-aos-duration="1200">
+                <div class="second_img_area">
+                    <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg"
+                        alt="">
+                </div>
+                <div class="second_section_text_area">
+                    <h1>Download your shows to watch offline</h1>
+                    <p>Save your favourites easily and always have something to watch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!-- Second Section End -->
+
+    <!-- Third Section Start -->
+    <section>
+        <div class="third_section">
+            <div class="third_section_area" data-aos="fade-right" data-aos-duration="1200">
+                <div class="third_section_text_area">
+                    <h1>Enjoy on your TV</h1>
+                    <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+                </div>
+                <div class="third_section_img_area">
+                    <img src="tv-removebg-preview.png" alt="">
+                    <video src="Video 53_assets_videos_video1.m4v" muted loop autoplay></video>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!-- Third Section End -->
+
+    <!-- Fourth Section Start -->
+    <section>
+        <div class="fourth_section">
+            <div class="fourth_section_area" data-aos="fade-left" data-aos-duration="1200">
+                <div class="fourth_img_area">
+                    <img src="https://occ-0-2849-3646.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABVr8nYuAg0xDpXDv0VI9HUoH7r2aGp4TKRCsKNQrMwxzTtr-NlwOHeS8bCI2oeZddmu3nMYr3j9MjYhHyjBASb1FaOGYZNYvPBCL.png?r=54d"
+                        alt="">
+                </div>
+                <div class="fourth_section_text_area">
+                    <h1>Download your shows to watch offline</h1>
+                    <p>Save your favourites easily and always have something to watch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!-- Fourth Section End -->
+
+    <!-- Question Section Start -->
+    <section>
+        <div class="qustion_section">
+            <div class="qustion_section_area" data-aos="fade-up" data-aos-duration="1000">
+                <div class="qustion_section_header">
+                    <h1>Frequently Asked Questions</h1>
+                </div>
+                <div class="qustion_box_area">
+                    <div class="qustion_box_p">
+                        <p>What is Netflix <span>+</span></p>
+                    </div>
+                    <div class="qustion_box_p">
+                        <p>How much does Netflix cost? <span>+</span></p>
+                    </div>
+                    <div class="qustion_box_p">
+                        <p>What can I watch on Netflix?<span>+</span></p>
+                    </div>
+                    <div class="qustion_box_p">
+                        <p>Where can I watch? <span>+</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!-- Question Section End -->
+
+    <!-- Footer Section Start -->
+    <section>
+        <div class="footer_area_section" data-aos="fade-up" data-aos-duration="1000">
+            <div class="footer_section_p">
+                <p>Questions? Call 000-800-919-1694</p>
+            </div>
+            <div class="footer_menu">
+                <div class="footer">
+                    <a href="#">Investor Relations</a>
+                    <a href="#">Jobs</a>
+                    <a href="#">Ways to Watch</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+                <div class="footer">
+                    <a href="faq">Help Centre</a>
+                    <a href="faq">Account</a>
+                    <a href="faq">Speed Test</a>
+                    <a href="faq">Legal Notices</a>
+                </div>
+                <div class="footer">
+                    <a href="faq">Media Centre</a>
+                    <a href="faq">Privacy</a>
+                    <a href="faq">Cookie Preferences</a>
+                    <a href="faq">Corporate</a>
+                </div>
+                <div class="footer">
+                    <a href="faq">Contact Us</a>
+                    <a href="faq">Speed Test</a>
+                    <a href="faq">Legal Notices</a>
+                    <a href="faq">Only on Netflix</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section End -->
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

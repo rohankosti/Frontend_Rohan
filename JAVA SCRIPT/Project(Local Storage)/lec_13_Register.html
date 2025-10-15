@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+
+
+    <center>
+        <h1>Form Validation using HTML,CSS,JavaScript</h1>
+    </center>
+    <hr>
+    <form method="POST" id="reg_form">
+        <h2>Registration Form</h2>
+        <table>
+            <tr>
+
+                <td><label>First Name: </label></td>
+                <td>
+                    <input type="text" class="fname" value="" name="fname" placeholder="First Name">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Last Name: </label></td>
+                <td>
+                    <input type="text" class="lname" name="lname" placeholder="Last Name">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Address: </label></td>
+                <td>
+                    <input type="textarea" class="address" size="50" name="address" placeholder="Address">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Gender: </label></td>
+                <td>
+                    <input type="radio" class="gender" name="gender" value="male" checked>Male
+                    <input type="radio" class="gender" name="gender" value="femele">Female
+                </td>
+            </tr>
+            <tr>
+                <td><label>Email Id: </label></td>
+                <td>
+                    <input type="mail" class="email" name="email" placeholder="example@gmail.com">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Mobile: </label></td>
+                <td>
+                    <input type="number" class="mobile" name="mobile">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Course:</label></td>
+                <td>
+                    <select name="course" class="course">
+                        <option value="select course">select course</option>
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="JavaScript">JAVASCRIPT</option>
+                        <option value="Java">JAVA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" class="btn btn-primary w-100">Register</button>
+                    <input type="reset" name="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script src="register.js">
+    </script>
+</body>
+
+</html>

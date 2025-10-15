@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinators In Css</title>
+</head>
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+
+    body>h1 {
+        background-color: bisque;
+        color: indianred;
+        text-align: center;
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    section .heading {
+        background-color: lightcoral;
+        color: whitesmoke;
+        text-align: center;
+        padding: 5px;
+        width: 100%;
+
+    }
+
+    section .heading h1 {
+        color: cornsilk;
+        text-transform: uppercase;
+        text-decoration: underline;
+        font-size: 30px;
+    }
+
+    .imgdiv {
+        border: 2px solid black;
+        background-color: cornsilk;
+        margin: 10px;
+        height: 50%;
+
+    }
+
+    .imgdiv>.img_gellery {
+        display: inline-block;
+        margin: 12.6px;
+        outline: 10px groove grey;
+        outline-offset: 5px;
+    }
+
+    .imgdiv>.img_gellery:hover {
+        background-color: lightskyblue;
+    }
+
+    .img_gellery>img {
+        border-radius: 50px;
+
+    }
+
+    section p+span {
+        background-color: brown;
+    }
+
+    .para2 ~p{
+        background-color: red;
+        color: silver;
+        width: 50%;
+        margin: 10px;
+        height: 30px;
+        padding: 5px;
+    }
+
+    /* **CSS combinator** ek tarah ka **selector** hota hai jo **do elements ke beech ke relationship** ko define karta hai. Jab hume kisi element ko uske parent, sibling, ya kisi specific structure ke base pe style dena hota hai, tab hum **combinator** ka use karte hain.
+
+### CSS ke 4 main combinators hote hain:
+
+---
+
+### 1. **Descendant combinator** (`space`)
+
+* **Syntax:** `A B`
+* **Meaning:** B element jo A ke **andar kahin bhi** ho (chahe directly ya deeply nested ho).
+
+```css
+div p {
+  color: red;
+}
+```
+
+👉 Iska matlab: **div ke andar jitne bhi p tags hain**, unka color red hoga.
+
+---
+
+### 2. **Child combinator** (`>`)
+
+* **Syntax:** `A > B`
+* **Meaning:** B element jo A ka **direct child** ho.
+
+```css
+div > p {
+  color: blue;
+}
+```
+
+👉 Iska matlab: sirf **directly div ke under wale p** tag ka color blue hoga.
+
+---
+
+### 3. **Adjacent sibling combinator** (`+`)
+
+* **Syntax:** `A + B`
+* **Meaning:** B element jo **turant A ke baad** aata ho (same level pe). <h1> </h1> <p> </P> :- h1+p
+
+```css
+h1 + p {
+  color: green;
+}
+```
+
+👉 Iska matlab: **h1 ke turant baad aane wala p** tag green hoga.
+
+---
+
+### 4. **General sibling combinator** (`~`)
+
+* **Syntax:** `A ~ B`
+* **Meaning:** B element jo A ke baad **same parent ke andar** kahin bhi ho.
+
+```css
+h1 ~ p {
+  color: orange;
+}
+```
+
+👉 Iska matlab: **h1 ke baad aane wale sabhi p** tags (same parent me) ka color orange hoga.
+
+---
+
+### Short Summary Table:
+
+| Combinator | Example | Meaning                  |
+| ---------- | ------- | ------------------------ |
+| Space      | `A B`   | B inside A (any level)   |
+| `>`        | `A > B` | B is direct child of A   |
+| `+`        | `A + B` | B is next sibling of A   |
+| `~`        | `A ~ B` | B is any sibling after A |
+
+Agar chaho to mai in sab pe ek live HTML+CSS example bhi bana ke samjha sakta hoon. Batao? */
+</style>
+
+<body>
+
+    <!-- 
+   1. Descendant combinator (space)
+
+   2. Child combinator (>)
+
+   3. Next sibling combinator (+)            <h1></h1> a ek ne j select krse
+                                             <p></p>
+
+   4. Subsequent-sibling combinator (~)      <div></div>   a badha select krse
+                                             <p>badha p tag ne css apse </p>
+                                             <p>lorem</p>
+    -->
+
+
+    <h1>CSS Combinators</h1>
+
+    <section>
+        <div class="heading">
+            <h1>Gallery</h1>
+        </div>
+
+        <div class="imgdiv">
+            <div class="img_gellery">
+                <img src="loginpage.jpg" alt="" srcset="" width="350px">
+            </div>
+
+            <div class="img_gellery">
+                <img src="loginpage.jpg" alt="" srcset="" width="350px">
+            </div>
+
+            <div class="img_gellery">
+                <img src="loginpage.jpg" alt="" srcset="" width="350px">
+            </div>
+
+            <div class="img_gellery">
+                <img src="loginpage.jpg" alt="" srcset="" width="350px">
+            </div>
+        </div>
+    </section>
+    <br>
+    <hr><br>
+
+
+    <section>
+        <p>Rohan Koshti</p>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut.</span>
+    </section>
+
+    <br>
+    <hr><br>
+
+
+    <section>
+        <div class="para2">
+        </div>  
+            
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ad.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ad.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ad.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ad.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ad.</p>
+            
+    </section>
+
+</body>
+
+</html>

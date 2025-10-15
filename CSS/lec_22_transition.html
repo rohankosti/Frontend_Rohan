@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Css</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .box {
+            height: 300px;
+            width: 300px;
+            margin: auto;
+             text-align: center;
+            line-height: 300px;
+            background-color: blueviolet;
+            outline: 15px groove rgb(13, 112, 225);
+            outline-offset: 5px;
+            position: relative;
+            top: 100px;
+            transition-property: all;        /* mian che a  */
+            transition-duration: 1s;
+            transition-timing-function: ease-in-out;
+            /* transition-delay: 1s; */
+            
+
+        }
+
+        .box:hover {
+            width: 400px;
+            height: 400px;
+            background-color: darkmagenta;
+            outline: 15px groove rgb(225, 13, 130);
+            outline-offset: 5px;
+            /* transform: translate(100px,100px); */
+            transform: rotate(360deg);
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Transition Css</h1>
+    <div class="box">Rohan Koshti</div>
+</body>
+
+</html>

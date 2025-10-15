@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table In Css</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        h2{
+            text-align: center;
+            margin-bottom: 50px;
+            text-decoration: underline;
+            color: #105fde;
+            margin-top: 30px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+        .table{
+            border-collapse: collapse;
+            width: 1200px;
+            height: 500px;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 18px;
+            color: white;
+            margin: auto;
+            padding: 5px;
+            /* border: 2px solid black; */
+        }
+       
+        th{
+            background-color: #095ce3;
+        }
+     table tr:nth-child(even){
+            background-color: #000000;
+        }
+         table tr:nth-child(odd){
+            background-color: #393131a1;
+        }
+        td:nth-child(1){
+              font-weight: bolder;
+              /* text-align: left; */
+              /* margin-left: -10px; */
+        }
+         td:hover{
+            background-color: #16b807;
+            color: chocolate;
+        }
+
+      table  tr:hover{
+            background-color: #b80707;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Table In Css</h2>
+    <table  class="table">
+        <tr>
+            <th>VITAMIN</th>
+            <th>CLASIFICATION</th>
+            <th>SOURCES</th>
+            <th>ADEQUATE INTAKE</th>
+        </tr>
+
+        <tr>
+            <td>A</td>
+            <td>fast souble</td>
+            <td>Dark-colored friuts</td>
+            <td>3,000IU/day</td>
+        </tr>
+
+        <tr>
+            <td>B</td>
+            <td>water-souble</td>
+            <td>Dark-colored friuts</td>
+            <td>1Mcg/day</td>
+        </tr>
+
+        <tr>
+            <td>B1</td>
+            <td>water-souble</td>
+            <td>Lean meats</td>
+            <td>1.7Mg/day</td>
+        </tr>
+
+        <tr>
+            <td>B6</td>
+            <td>water-souble</td>
+            <td>Lean meats</td>
+            <td>2.2Mcg/day</td>
+        </tr>
+
+        <tr>
+
+            <td>B12</td>
+            <td>water-souble</td>
+            <td>Nutes</td>
+            <td>1.7Mg/day</td>
+        </tr>
+
+        <tr>
+            <td>C</td>
+            <td>water-souble</td>
+            <td>Meat</td>
+            <td>2.2Mcg/day</td>
+        </tr>
+
+        <tr>
+            <td>D</td>
+            <td>fast souble</td>
+            <td>Broccoli</td>
+            <td>90 Mg/day</td>
+
+        </tr>
+
+        <tr>
+            <td>E</td>
+            <td>fast souble</td>
+            <td>Avacado</td>
+            <td>33 IU/day</td>
+        </tr>
+
+        <tr>
+            <td>K</td>
+            <td>fast souble</td>
+            <td>Cabbage</td>
+            <td>2.2Mcg/day</td>
+        </tr>
+
+    </table>
+</body>
+
+</html>

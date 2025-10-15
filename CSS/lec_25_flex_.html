@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex In Css</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            height: 90vh;
+            width: 40%;
+            border: 2px solid black;
+            display: flex;
+
+
+            /* for create navbar using flex give widht menu or ul after appy flex property  */
+
+            /**************************** Parent div property apply ******************* */
+
+            /* flex-direction: column; */            /* badha ne box ni vertical ma space aapse */
+            /* flex-direction: column-reverse;*/     /* badha ne box ni vertical ma space aapse ane bottom thi start karese */ 
+            /* flex-direction: row; */               /* badha ne box ni horizontal ma space aapse */
+            /* flex-direction: row-reverse; */       /* badha ne box ni horizontal ma space aapse ane right thi start karese */
+
+
+
+            /* justify-content:flex-start;        badha ne box ni start ma space aapse left) horizontel*/
+            /* justify-content:flex-end;          badha ne box ni end ma space aapse right) horizontel*/
+            /* justify-content: center;           badha ne box ni beech ma space aapse */
+            /* justify-content: space-between;*/ /*badha ne box ni beech ma space aapse  */
+            /* justify-content: space-around;    /*badha ne box ni beech ma space aapse ane border ni side ma half space */
+            /* justify-content: space-evenly;    /*badha ne box ni beech ma space aapse ane border ni side ma pane same space aapse  */
+
+
+
+            /* align-items: flex-start;         badha ne box ni start ma space aapse top vertical */
+            /* align-items: flex-end;           badha ne box ni start ma space aapse bootom vertical */
+            /* align-items: center;             badha ne box ni beech ma space aapse vertical */
+            /*  align-items: stretch;           /*badha ne box ni height ne parent div ni height ma stretch karese*/
+            /*  align-items: baseline;          badha ne box ni text ni baseline ne align karese*/
+
+
+            /* flex-wrap: nowrap;            badha ne box ni space na hoy to wrap na  karese */
+              /* flex-wrap: wrap;            badha ne box ni space na hoy to next line ma wrap karese */
+             /* flex-wrap: wrap-reverse;     badha ne box ni space na hoy to    previous line ma wrap karese */
+
+
+
+             /* align-content: flex-start;    badha ne box ni start ma space aapse top vertical*/
+             /*align-content: flex-end;       badha ne box ni end ma space aapse bottom vertical */
+             /* align-content: center;        badha ne box ni beech ma space aapse vertical  */
+             /* align-content: space-between; badha ne box ni beech ma space aapse vertical  */
+            /* align-content: space-around;   badha ne box ni beech ma space aapse vertical ane border ni side ma half space */
+            /* align-content: space-evenly;   badha ne box ni beech ma space aapse vertical ane border ni side ma pane same space */
+        }
+
+        .box1 {
+
+             height: 200px;
+            width: 200px; 
+            border: 2px solid black;
+            background-color: rgb(237, 9, 101);
+
+ /******************** Child div property apply  **********************/
+
+
+            /* flex-grow: 220;       jab container ke pass extra sapce ho tb */
+            /* flex-shrink: 50;      jab container ke pass kam sapce ho tb  */
+            /* flex-basis: 300px;    box ni width ne set karese */
+            /* order:3; */       
+            /* align-self: stretch; */
+
+        }
+
+        .box2 {
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            background-color: rgb(5, 137, 237);
+             order:1;
+
+
+        }
+
+        .box3 {
+
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            background-color: rgb(173, 10, 222);
+             order:4;
+
+        }
+
+        .box4 {
+
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            background-color: rgb(241, 101, 7);
+             order:2;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+        <div class="box4">box4</div>
+        
+         
+    </div>
+</body>
+
+</html>

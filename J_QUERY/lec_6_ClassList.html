@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .green {
+        height: 300px;
+        width: 300px;
+        background-color: greenyellow;
+        border: 2px solid black;
+        transition: all 2s ease-in-out;
+    }
+    .body{
+        background-color: royalblue;
+        color: white;
+    }
+</style>
+
+<body>
+
+    <h2>ClassList In Js </h2>
+
+    <ul>
+
+        <li>append</li>
+        <li>prepend</li>
+        <li>before</li>
+        <li>after</li>
+        <li>remove</li>
+        <li>empty</li>
+        <li>addClass</li>
+        <li>removeClass</li>
+        <li>Toggle</li>
+    </ul>
+
+
+    <div class="div">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perferendis!</p>
+        <span>This Is A Span Tag</span>
+        <div>This Is A Div Tag</div>
+
+    </div>
+
+    <button>Click Me</button>
+    <button id="btn">Remove Me</button>
+
+
+    <div class="list">This Is a New Tag Use to addClass Effect </div>
+
+       <div class="bd">Change Body color</div>
+    <script src="J_QUERY.js/jquery.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            $("button").click(function () {
+
+                // 1.) append add data in last
+                $(".div").append("<a href='www.google.com'>Google </a>");
+                $(".div").css({
+                    "border": "2px solid black",
+                    "height": "500px",
+                    "width": "500px",
+
+                })
+
+                //  2.) prepend add data in start 
+                $(".div").prepend("Use to append to add data in last of the target element")
+
+                // 3.)before add data in start of outer  tag 
+                $(".div").before("<a href='www.youtube.com'>Youtube </a>");
+
+                // 4.)after add data in end of outer  tag 
+                $(".div").after("use before method add data in outer of tag ");
+            });
+
+            //    5.) Removes the selected element (and its child elements)
+            $("#btn").click(function () {
+                $(".div").remove();
+
+                //  6.) Removes the child elements from the selected element
+                $(".div").empty();
+
+            });
+
+            //7.) Add a css class in daynamic 
+            $(".list").click(function () {
+                $(".list").addClass("green");
+            });
+
+            //8.) remove a css class in daynamic 
+            $(".list").mouseleave(function () {
+                $(".list").removeClass("green");
+            });
+
+            //9.) Toggle like on or off 
+             
+             $(".bd").click(function(){
+                 $("body").toggleClass("body");
+             });
+
+
+
+
+        });
+    </script>
+
+</body>
+
+</html>

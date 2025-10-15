@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex</title>
+  <link rel="stylesheet" href="bootstrap-5.3.7/bootstrap-5.3.7/dist/css/bootstrap.min.css">
+</head>
+<style>
+  h4 {
+    text-align: center;
+
+  }
+</style>
+
+<body>
+  <h4>Flex In Bootstrap 10 Methods</h4>
+  <ul>
+
+    <li>flex-direction</li>
+    <li>justify content (horizontal)</li>
+    <li>align item (verticle)</li>
+    <li>align content (verticle but multiple row)</li>
+    <li>align self </li>
+    <li>flex wrap </li>
+    <li>with align item (verticle)</li>
+    <li>orders</li>
+    <li>Fill</li>
+    <li>shrink / grow</li>
+    <li>Auto margin</li>
+  </ul>
+
+
+
+  <h4> 1.) Flex - Direction</h4>
+  <div class=" w-100  bg-danger border border-2 border-success d-flex flex-column-reverse  ">
+    <div class="bg-info border border-2  border-dark m-2 p-2 text-white rounded-3  ">HOME</div>
+    <div class="bg-info border border-2  border-dark m-2 p-2 text-white rounded-3  ">ABOUT</div>
+    <div class="bg-info border border-2  border-dark m-2 p-2 text-white rounded-3  ">SERVICE</div>
+    <div class="bg-info border border-2  border-dark m-2 p-2 text-white rounded-3  ">CONTACT US</div>
+
+
+  </div>
+
+  <h4> 2.) Justify - Content</h4>
+  <div class="bg-danger border border-2 border-success d-flex justify-content-evenly  ">
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">HOME</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">ABOUT</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">SERVICE</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">CONTACT US</div>
+  </div>
+
+  <h4> 3.) Alighn-item (set hight and widht)</h4>
+  <div class="bg-danger border border-2 border-success d-flex align-items-center w-100" style="height: 300px;">
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 w-20 ">HOME</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 w-20 ">ABOUT</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 w-20 ">SERVICE</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 w-20 ">CONTACT US</div>
+  </div>
+
+  <h4> 4.) Align-content (use flex-wrap) </h4>
+  <div class="bg-danger border border-2 border-success d-flex flex-wrap align-content-start ">
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">HOME</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">ABOUT</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">SERVICE</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">CONTACT US</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">HOME</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">ABOUT</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">SERVICE</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">CONTACT US</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">HOME</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">ABOUT</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">SERVICE</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">CONTACT US</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">HOME</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">ABOUT</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">SERVICE</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">CONTACT US</div>
+  </div>
+
+  <h4> 5.) Alighn - self </h4>
+  <div class="bg-danger border border-2 border-success d-flex  " >
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px   " style="height: 200px;" > HOME
+    </div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px align-self-end ">ABOUT</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">SERVICE</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">CONTACT US</div>
+  </div>
+
+
+  <h4> 6.) Flex - wrap (use align content after this effect )</h4>
+  <div class="bg-danger border border-2 border-success d-flex flex-wrap align-content-start  ">
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">HOME</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">ABOUT</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">SERVICE</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">HOME</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">ABOUT</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">SERVICE</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">HOME</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">ABOUT</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">SERVICE</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">HOME</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">ABOUT</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">SERVICE</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">CONTACT US</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">HOME</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">ABOUT</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">SERVICE</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">CONTACT US</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">HOME</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">ABOUT</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">SERVICE</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 width-30px ">CONTACT US</div>
+  </div>
+
+  <h4> 7.) With Align-Item  same as align-item(verticle)</h4>
+  <div class="bg-danger border border-2 border-success d-sm-flex align-items-center" style="height: 200px;">
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 m-auto ">HOME</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3  ">ABOUT</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3  ">SERVICE</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3  ">CONTACT US</div>
+  </div>
+
+  <h4> 8.) Order</h4>
+  <div class="bg-danger border border-2 border-success d-sm-flex  ">
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 order-2 ">HOME</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 order-1 ">ABOUT</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 order-4 ">SERVICE</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 order-3 ">CONTACT US</div>
+  </div>
+
+  <h4> 9.) Fill</h4>
+  <div class="bg-danger border border-2 border-success d-flex  ">
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 flex-fill ">HOME</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 flex-fill ">ABOUT</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 flex-fill ">SERVICE</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3  ">CONTACT US</div>
+  </div>
+
+  <h4> 10.) shrink / grow</h4>
+  <div class="bg-danger border border-2 border-success d-flex  ">
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 flex-grow-1  ">HOME</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 flex-grow-0 ">ABOUT</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3  flex-grow-1">SERVICE</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3  flex-grow-0">CONTACT US</div>
+  </div>
+
+  <h4> 11.) Auto margin (ms:-right side , me:- left side , m :- center) </h4>
+  <div class="bg-danger border border-2 border-success d-flex   ">
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3  ms-auto ">HOME</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3  ">ABOUT</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 ">SERVICE</div>
+    <div class="bg-info border border-2- border-dark m-2 p-2 text-white rounded-3 ">CONTACT US</div>
+  </div>
+
+
+
+</body>
+
+</html>

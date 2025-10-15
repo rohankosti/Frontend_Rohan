@@ -1,0 +1,133 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Libertinus Serif Display", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  /* background-color: #040f13; */
+  background-color: #f5f6ff;
+  scroll-behavior: smooth;
+}
+.dark_theme {
+  background-color: rgb(255, 242, 2);
+  color: black;
+}
+.navbar {
+  position: fixed;
+  z-index: 10;
+  /* width: 90% !important;
+    margin: auto; 
+    border-radius:30px; */
+}
+.carousel-item img {
+  position: relative;
+  top: 75px;
+  height: 100vh !important;
+}
+
+a:hover {
+  transition: all;
+  transition-duration: 2s;
+  /* text-decoration: underline; */
+  color: #0b1ae9 !important;
+  font-weight: 500;
+}
+i {
+  width: 55px !important;
+  height: 40px !important;
+  /* background-color: white; */
+  color: #0b1ae9;
+  align-content: center;
+  /* border: 2px solid #0b1ae9; */
+}
+
+/* service section */
+.card1:hover {
+  transform: scale(1.05);
+  transition: all;
+  transition-duration: 1s;
+  border: 2px solid #0b1ae9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.service_menu div:hover {
+  background-color: #0616f3b9;
+}
+/* service section end */
+.contact_menu {
+  height: 100px !important;
+  width: 100% !important;
+  background-color: rgba(255, 255, 255, 0.281);
+  /* border: 2px solid black; */
+  border-radius: 20px;
+  text-align: left;
+  /* opacity: 0.1; */
+}
+.contact_menu:hover {
+  transform: scale(1.04);
+  transition: all;
+  transition-duration: 1s;
+}
+.contact_icon {
+  background-color: #d1d5ff;
+}
+.contact_menu p,
+h6 {
+  font-weight: 600;
+}
+.footer_col li {
+  margin: 5px;
+  padding: 2px;
+  cursor: pointer;
+  color: #6c757d !important;
+}
+.footer_col li:hover {
+  color: #0b1ae9 !important;
+  /* text-decoration: underline; */
+  transform: scale(1.03);
+  transition: all;
+  transition-duration: 1s;
+}
+.footer2 {
+  list-style-type: none;
+  text-decoration: none;
+}
+.footer2 li a {
+  text-decoration: none;
+}
+.footer2 li a:hover {
+  color: #0b1ae9;
+}
+.scrollup {
+  position: absolute;
+  right: 0px;
+  background-color: #0b1ae9;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+.all_card:hover {
+  transform: scale(1.01);
+  transition: all;
+  transition-duration: 1s;
+}
+.contact_icon:hover {
+  transform: scale(1.05);
+  transition: all;
+  /* transition-duration: 1.0s;  */
+}
+.list-unstyled li:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: all;
+  transition-duration: 1s;
+  text-decoration: underline;
+}

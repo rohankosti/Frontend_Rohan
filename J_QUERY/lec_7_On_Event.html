@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Event In Jquery</title>
+</head>
+<style>
+    .p {
+        height: 300px;
+        width: 300px;
+        background: linear-gradient(to right, red, yellow);
+        color: white;
+        transition: all 3s ease-in-out;
+
+
+    }
+
+    .p2 {
+        height: 300px;
+        width: 300px;
+        background: linear-gradient(to right, rgb(34, 215, 173), rgb(56, 81, 8));
+        color: white;
+        transition: all 3s ease-in-out;
+
+    }
+
+    .toggle {
+        height: 300px;
+            width: 300px;
+            /*  "background": "linear - gradient(to right, rgb(67, 128, 198), rgb(151, 39, 136))"; */
+            background: linear-gradient(to right, rgb(67, 128, 198), rgb(151, 39, 136));
+            color: white;
+            transition: all 3s ease-in -out;
+            transform: scale(0.7);
+    }
+</style>
+
+<body>
+    <h2>lec_7 On_Event In Jquery</h2>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias pariatur nulla soluta. Nam, itaque? Voluptatum
+    </p>
+
+    <script src="J_QUERY.js/jquery.js"></script>
+
+    <script>
+
+        // 1.) Method on event
+        // $(document).ready(function () {
+        //    $("p").on("click",function (){
+        //        alert("On Event Are Working");
+        //    });
+
+        // });
+
+        //  2.) Method on event
+        //  $(document).ready(function () {
+        //    $("p").on("click mouseenter",function (){
+        //        alert("On Event Are Working");
+        //    });
+
+        // });
+
+        //  3.) Method on event
+        // this key means ke ajj element use kro 3 p hse to 3 p target thai jse so use this keyword 
+        $(document).ready(function () {
+            $("p").on({
+                "mouseenter": function () {
+                    $("p").addClass("p");
+                },
+
+                click: function () {
+                    $("p").toggleClass("toggle")
+                },
+
+                mouseleave: function () {
+                    $(this).addClass("p2");
+                }
+            })
+
+        });
+
+
+    </script>
+</body>
+
+</html>

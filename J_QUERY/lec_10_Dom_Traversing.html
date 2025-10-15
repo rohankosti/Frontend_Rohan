@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    div {
+        margin: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 5px;
+        border: 1px solid #ccc;
+    }
+
+    li {
+        margin: 5px 0;
+        padding: 5px;
+        border: 1px solid #ccc;
+    }
+
+    span {
+        color: #555;
+
+        border: 1px solid #ccc;
+    }
+</style>
+
+<body>
+    <h2 class="h2">Dom Traversing</h2>
+
+    <div class="parent">
+        <ul class="ul1">
+            <li class="li"><span class="child1">Children 1</span></li>
+            <li><span class="child2">Children 2</span></li>
+        </ul>
+    </div>
+
+
+    <div class="parent1">
+        <ul class="ul">
+            <li><span class="child3">Children 1</span> <span>Children 3</span></li>
+            <li><span class="child4">Children 2</span> <span>Children 4</span></li>
+        </ul>
+    </div>
+
+
+    <div id="id">
+        <h4 class="h4">Parent Method In Jquery upwords (Child to Parents)</h4>
+        <ul>
+            <li>Parent:- Direct Parent (li)</li>
+            <li>Parents:- All Parents before span tag (li,ul,div,body,html)</li>
+            <li>Parentsuntil:-You Have control how far you reach dom elements</li>
+        </ul>
+
+        <h4>Children Method In Jquery downword (Parents to child)</h4>
+        <ul>
+            <li>Children:- Direct Children (ul) </li>
+            <li>find:- You Find Child Tag Inside The Any Other Tag</li>
+
+        </ul>
+    </div>
+
+    <div id="id1">
+        <h3 class="h5">Siblings Method In Jquery</h3>
+        <ul>
+            <li>Siblings:- It Gives All Siblings Of Target Element</li>
+            <li>Next:- It Gives Next Sibling Of Target Element</li>
+            <li>NextAll:- It Gives All Next Siblings Of Target Element</li>
+            <li>NextUntil:- It Gives All Next Siblings Of Target Element Until Specified            
+            <li>Prev:- It Gives Previous Sibling Of Target Element</li>
+            <li>PrevAll:- It Gives All Previous Siblings Of Target Element</li>
+            <li>PrevUntil:- It Gives All Previous Siblings Of Target Element Until Specified
+        </ul>
+    </div>
+    <script src="J_QUERY.js/jquery.js"></script>
+    <script>
+
+        $(document).ready(() => {
+            let parent = $(".child1").parent()
+            let parents = $("span").parents()
+            let parentsuntil = $(".child2").parentsUntil("body");
+            //  console.log(parent);
+            //  console.log(parents);
+            // console.log(parentsuntil);
+
+            //   parentsuntil.eq(0).css({    //only one elment set style without using loop
+            //     "background-color": "blue",
+            //         "border": "2px solid black",
+            //         "color": "red"
+            //   })
+            parentsuntil.each((index, e) => {
+                console.log(e);
+                $(e).css({
+                    // "background-color": "royalblue",
+                    "border": "2px solid black",
+                    "color": "red",
+                });
+            });
+
+            let children = $(".ul").children();
+            // console.log(children);
+
+            let find = $(".ul").find("a");
+            // console.log(find);
+
+            //.siblings() → apne target wale ke parent ke bacche deta hai, par target wale ko skip karke
+            // let sibl = $("ul").siblings().css("background-color", "yellow");
+            // console.log(sibl);
+
+
+            //   let next = $(".h2").next().css("background-color", "yellow"); 
+            //   console.log(next);
+              
+            //       let nextall = $(".h2").nextAll().css("background-color", "yellow"); 
+            //   console.log(nextall);
+              
+              let nextuntil = $(".h2").nextUntil(".parent1").css("background-color", "red");
+              console.log(nextuntil);
+
+            // let prev = $(".parent1").prev().css("background-color", "skyblue");
+            // console.log(prev);
+              
+
+            // let prevall = $("#id1").prevAll().css("background-color", "skyblue");
+            // console.log(prevall);
+
+
+            // let prevuntil = $("#id1").prevUntil(".h2").css("background-color", "skyblue");
+            // console.log(prevuntil);
+
+
+
+
+        });
+
+    </script>
+</body>
+
+</html>

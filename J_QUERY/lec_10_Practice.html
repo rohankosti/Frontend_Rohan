@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .li {
+        border: 2px solid red;
+    }
+
+    img {
+        border: 2px solid black;
+        margin: 10px;
+       
+    }
+</style>
+
+<body>
+    <h2>
+        Lec_10_Practice
+    </h2>
+
+    <div class="box">
+        <ul>
+            <li class="li">list 1</li>
+            <li>list 2</li>
+            <li>list 3</li>
+            <li>list 4</li>
+            <li>list 5</li>
+        </ul>
+    </div>
+
+
+    <table>
+        <tr class="tr">
+            <th>TD1</th>
+            <td>Rohan</td>
+
+        </tr>
+
+        <tr>
+            <th>td2</th>
+            <td>Koshti</td>
+
+        </tr>
+
+        <tr>
+            <th>td3</th>
+            <td>Lorem ipsum dolor sit amet.</td>
+
+        </tr>
+
+        <button>click</button>
+
+    </table>
+    </form>
+
+    <div class="imgbox">
+        <img src="Git_Hub.jpeg" alt="" srcset="" width="100px" height="100px" class="img1">
+        <img src="Git_Hub.jpeg" alt="" srcset="" width="100px" height="100px">
+        <img src="Git_Hub.jpeg" alt="" srcset="" width="100px" height="100px">
+        <img src="Git_Hub.jpeg" alt="" srcset="" width="100px" height="100px">
+        <img src="Git_Hub.jpeg" alt="" srcset="" width="100px" height="100px">
+    </div>
+
+    <script src="J_QUERY.js/jquery.js"></script>
+    <script>
+
+        $(document).ready(() => {
+            let sibl = $(".li").siblings();
+            // console.log(sibl);
+            sibl.css({
+                "background-color": "green",
+                "opicity": "0.2",
+
+                // $(".li").css("border", "2px solid red");
+            });
+            $("button").click(() => {
+                let sib = $(".tr").nextUntil("button").css("background-color", "yellow");
+                console.log(sib);
+                sib.each((e) => {
+                    console.log(e);
+
+                })
+            });
+
+            let img = $(".img1").siblings().css("opacity", "0.2");
+            console.log(img);
+            $(".img1").css({
+              
+                "box-shadow": "3px 3px 3px, olive 1em 4px 0.4em",
+            "filter": "brightness(1.2)",
+        });
+             
+           
+
+        })
+
+    </script>
+</body>
+
+</html>

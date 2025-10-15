@@ -1,0 +1,21 @@
+In Bootstrap how to short Humberger like click the menu inside open more options 
+
+intilize Humbeger menu  in navbar section and outside of navbar define  Humbeger menu  ,
+use of this html attribute :- 
+type="button" data-bs-toggle="offcanvas" 
+data-bs-target="#offcanvasMenu"> give id with # jiisko click krna hai or jisko show krna ho use bhi id ,
+ <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu">
+
+
+ Full_Syntax:- 
+ type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"> menu click
+ <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu"> after click show menu option    
+
+Most Importtent:- 
+
+Rule yad rakhna:
+Modal trigger → data-bs-toggle="modal" + data-bs-target="#yourModalId"
+
+Modal ID → har modal ka unique id hona chahiye (dono jagah same).
+
+Bootstrap JS aur CSS → sahi se include hone chahiye (CDN ya local).

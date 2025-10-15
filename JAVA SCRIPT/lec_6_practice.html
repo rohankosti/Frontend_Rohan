@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .div {
+        width: 150px;
+        height: 45px;
+        text-decoration: underline;
+        padding-top: 20px;
+        font-size: 20px;
+        text-align: center;
+        border: 2px solid black;
+        border-radius: 40%;
+        color: white;
+        background-color: rgb(33, 109, 185);
+
+    }
+    
+    .body {
+        background-color: blueviolet;
+    }
+</style>
+
+<body >
+    <h1>CHANGE THE BODY COLOR IN ONE CLICK</h1>
+
+    <div class="div" onclick="func()">
+        Change Color
+    </div>
+    
+    <script>
+        function func() {
+            let event = document.querySelector("body");
+            event.classList.toggle("body");
+
+        }
+                  
+    </script>
+</body>
+
+</html>

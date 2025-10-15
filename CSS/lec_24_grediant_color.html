@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+        }
+
+        .box1 {
+            height: 300px;
+            width: 300px;
+            /* border: 2px solid black; */
+            color: white;
+            margin: auto;
+            margin-top: 100px;
+            font-size: 25px;
+            background-image: linear-gradient(rgb(19, 222, 154), rgb(75, 0, 128));
+            /* background-image:linear-gradient(red,green,blue) ;
+            background-image:linear-gradient(to right,red,green,blue) ;
+            background-image:linear-gradient(to left,red,green,blue) ;
+            background-image:linear-gradient(to top,red,green,blue) ;
+            background-image:linear-gradient(to bottom,red,green,blue) ;
+            background-image:linear-gradient(to left bottom,red,green,blue) ; */
+            /* background-image: linear-gradient(20deg, rgb(19, 222, 154), rgb(75, 0, 128), rgb(255, 0, 102)); */
+
+
+        }
+
+        .box2 {
+            height: 300px;
+            width: 300px;
+            /* border: 2px solid black; */
+            font-size: 25px;
+            color: white;
+            margin: auto;
+            margin-top: 100px;
+            /* background-image:Radial-gradient(rgb(255, 106, 0) 10%,rgb(171, 200, 6) 20%,rgb(255, 170, 0) 50%) ; */
+            background-image: Radial-gradient(red, green);
+            opacity: 0.8;
+
+
+        }
+
+        .box3 {
+            height: 300px;
+            width: 300px;
+            /* border: 2px solid black; */
+            color: white;
+            font-size: 25px;
+            margin: auto;
+            margin-top: 100px;
+            border-radius: 50%;
+            /* background-image: conic-gradient(red, yellow); */
+              background-image: conic-gradient( red 0deg, red 45deg, yellow 45deg,yellow 90deg, green 90deg,green 135deg,rgb(0, 126, 128) 135deg, rgb(0, 126, 128) 180deg, rgb(229, 128, 21) 180deg,rgb(229, 128, 21) 225deg,rgb(158, 58, 136) 225deg,rgb(158, 58, 136) 270deg,rgb(114, 14, 31) 270deg,rgb(114, 14, 31) 315deg,rgb(77, 245, 155) 315deg,rgb(77, 245, 155) 360deg);
+            animation: round 3s linear infinite;
+            
+
+        }
+
+        @keyframes round {
+            from{
+               transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- three types of gredinant color
+     
+     1)linear Gradient
+     2)Radial Gradients
+     3)Conical Gradient  -->
+
+
+
+    <div>
+        <div class="box1">Liniear Grediant</div>
+        <div class="box2">Radial Grediant</div>
+        <div class="box3"></div>
+    </div>
+
+
+</body>
+
+</html>

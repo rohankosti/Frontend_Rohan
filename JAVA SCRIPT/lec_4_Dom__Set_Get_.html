@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- 
+    1.)createElement : create new elemet using this method
+    2.)append : append means inside tag but before end of tag
+    3.)prepend : prepend means inside tag but start of tag
+    4.)before :before means before tag/element (outside)
+    5.)after : after means after tag/element (outside) -->
+
+    <!-- Method	Kya karta hai?
+append	Div ke andar, content ke end mai naya element ya text dalta hai.
+prepend	Div ke andar, content ke start mai naya element ya text dalta hai.
+before	Div ke bahar, <div> se pehle naya element ya text dalta hai.
+after	Div ke bahar, <div> ke turant baad naya element ya text dalta hai. -->
+
+
+    <h1>Set And Get Method in Java Script</h1>
+
+    <p>Then Change the any attribute in html then use getAttribute And setAttribute Method</p>
+    <p>Then Chnage the HTML Content Using innerHTML And innerTEXT Method</p>
+
+    <div class="container">
+        <div id="box">
+            Box
+        </div>
+     
+    </div>
+
+
+    <script>
+        let get = document.querySelector("h1")   //Get method
+        get.innerHTML = "Get And Set Method in Java Script"; //Set property
+        console.log(get);
+
+
+        //  us create Element Method
+        let createle = document.createElement("a");
+        createle.innerText = "Google";
+        createle.setAttribute("href", "https://www.google.com");
+        document.body.append(createle);
+        //   document.body.appendChild(createle);
+        console.log(createle);
+
+
+        let append = document.querySelector("p");
+        console.log(append);
+
+
+        // Append Method ->append means inside tag but before end of tag
+        //  append na use vde apde p tag ne inside container append kryu 
+
+        let newappend = document.getElementsByClassName("container")[0];
+        newappend.append(append);
+        newappend.append("Rohan Koshti");
+
+        // prepend : prepend means inside tag but start of tag
+        //  newappend.prepend(append);
+
+        //before: means before tag/element (outside)
+        //   newappend.before(append);
+
+        //after: means before tag/element (outside)
+        //   newappend.after(append);
+
+
+    </script>
+</body>
+
+</html>

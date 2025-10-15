@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .box1 {
+            background-color: darkblue;
+            color: gainsboro;
+        }
+    </style>
+    <h1>KeyEvents In Java Script</h1>
+    <!-- 
+onkeyup:-Key release hone ke baad key ka naam print hoga. 
+onkeydown:-Jaise hi key press karoge, console me us key ka naam turant dikhega.
+onchange:-Agar tum text likho aur bahar click karo, tab value print hogi
+onfocus:-Input box me click karoge, console me message dikhega.
+onblur:-Agar input box ke bahar click karoge, ye trigger hoga.
+onsubmit:- 
+-->
+
+    <form action="">
+        <label for="">Enter Text:-</label>
+        <input type="text" placeholder="Type Something">
+        <input type="text" placeholder="Show Text" id="id">
+    </form>
+
+    <script>
+
+        //.value= (read value) or.value="Hello"= (set value) 
+        //.value KeyEvents mai use hota hai kyuki user kya konsa text add kr rha hai
+        //get and set attribute alga hai yha pr
+
+        let input = document.querySelector("input");
+        let text = document.getElementById("id");
+        console.log(input);
+
+
+        //keydown:
+
+        // input.addEventListener("keydown", () => {
+        //     console.log("Keydown:", input.value);
+        // })
+
+        //keyup:
+
+        // input.addEventListener("keyup", () => {
+        //      text.innertext=input.value;
+        //     console.log("Keyup", input.value);
+        // })
+
+    //     //focus:
+
+        input.addEventListener("focus", () => {
+            
+             text.innertext=input.value;
+            console.log("focus", input.value);
+        })
+
+    //     //blur :
+
+    //     input.addEventListener("blur", () => {
+    //         //  text.innertext=input.value;
+    //         console.log("blur", input.value);
+    //     })
+    //    //change
+    //     input.addEventListener("change", () => {
+    //         //  text.innertext=input.value;
+    //         console.log("change", input.value);
+    //     })
+
+
+    </script>
+</body>
+
+</html>

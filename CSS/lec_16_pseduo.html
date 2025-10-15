@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paseduo Class In Css</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        :root{
+            --primerly:rgb(16, 143, 228);
+            --secondry:lightcoral;
+            --padding: 5px;
+            --margin:5px;
+        }
+        p:first-child {
+            color: var(--primerly);
+            padding: var(--padding);
+            margin: var(--margin);
+        }
+
+        p:last-child {
+            color: var(--primerly);
+        }
+
+        p:first-of-type {
+            background-color: var(--secondry);
+        }
+         p:last-of-type {
+            background-color: springgreen;
+        }
+       h2:not(p){
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        p:nth-child(even){
+            border: 2px solid black;
+        }
+
+        p:nth-child(5){
+            background-color: var(--secondry);
+        }
+        p:nth-last-child(even){
+            color: var(--primerly);
+        }
+         p:nth-last-of-type(2){
+            background-color: rgb(244, 7, 7);
+         }
+         p:nth-of-type(2){
+            border: 2px solid black;
+         }
+         :only-child{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+         }
+         :only-of-type{
+            color:rgb(7, 249, 23);
+         }
+    </style>
+</head>
+
+<body>
+    <h2>Paseduo Class In Css</h2>
+
+
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, dolor?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, dolor?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, dolor?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, dolor?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, dolor?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, dolor?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, dolor?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, dolor?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, dolor?</p>
+
+
+    </div>
+
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, dolor?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, dolor?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, dolor?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, dolor?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, dolor?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, dolor?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, dolor?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, dolor?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, dolor?</p>
+    </div>
+
+</body>
+
+</html>

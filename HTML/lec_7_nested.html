@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Tabel In Html</title>
+</head>
+<body>
+    <h1>Online Order</h1>
+    <table border="5">
+        <tr>
+            <th>Description</th>
+            <th>Quatity</th>
+            <th>Price</th>
+            <th>Email Account Note</th>
+            
+        </tr>
+        <tr>
+            <td>Email Account</td>
+            <td>10</td>
+            <td>$9.90</td>  
+            <td rowspan="5">
+            <table border="1">
+                <tr>
+                    <td>MailBox</td>
+                    <td>10GB</td>
+                </tr>
+                <tr>
+                    <td>WebMail</td>
+                    <td>Yes</td>
+
+                </tr>
+                <tr>
+                    <td>POP3</td>
+                    <td>Yes</td>
+
+                </tr>
+                <tr>
+                    <td>IMAP</td>
+                    <td>Yes</td>
+
+                </tr>
+                <tr>
+                    <td>Anti-Spam</td>
+                    <td>Yes</td>
+
+                </tr>
+             </table>          
+         
+        </tr>
+        <tr>
+            <td>FYI Center.comAd</td>
+            <td>1</td>
+            <td>$90.00</td>            
+
+        </tr>
+        <tr>
+            <td>1 Year Acsses</td>
+            <td>1</td>
+            <td>$199.00</td>            
+
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: right;">Shipping</td>
+            <td>$3.99</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: right">Tax</td>
+            <td >$15.99</td>
+        </tr>
+    </table>
+</body>
+</html>

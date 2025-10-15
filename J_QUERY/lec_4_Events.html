@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<style>
+
+
+</style>
+
+<body>
+   <h2>lec_4_Events In Java Script</h2>
+
+   <div class="box">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, error.
+   </div>
+   <br>
+   <button>Click Me</button>
+
+   <button id="btn">Remove Me</button>
+
+   <div class="box1">
+      <img src="Git_Hub.jpeg">
+   </div>
+
+   <script src="J_QUERY.js/jquery.js"></script>
+   <script>
+
+      $(document).ready(function () {
+
+         // 1.) Click Method
+         $("button").click(function () {
+
+            $("div").css({
+               "height": "300px",
+               "width": "300px",
+               "color": "yellow",
+               "background-color": "red",
+            });
+
+         });
+
+
+         // 2.) DblClick Method
+         $("#btn").dblclick(function () {
+
+            $("div").css({
+               "height": "300px",
+               "width": "300px",
+               "color": "green",
+               "background-color": "grey",
+            });
+
+
+         });
+
+         // 3.) mouseevent Method 
+         $(".box1").mouseenter(function () {
+
+            $(".box1").css({
+               "height": "150px",
+               "width": "150px",
+               "background-color": "grey",
+               "border": "2px solid black",
+               "text-align": "center",
+               // "margin": "auto",
+
+            })
+
+            $("img").css({
+               "height": "14px",
+               "width": "14px",
+            });
+         });
+
+         // 4.)mouseleave method
+
+         $("img").mouseleave(function () {
+            $("img").css({
+               "height": "300px",
+               "width": "300px",
+               "transition":"all 5s ease-in-out",
+
+            });
+         });
+
+      });
+   </script>
+</body>
+
+</html>

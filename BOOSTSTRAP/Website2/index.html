@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Ticket, Play, Sports, Event</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4cdd077a78.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/IMAGES/favicone.jpg" type="image/x-icon" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary shadow-sm">
+        <!-- Removed container from nav, added to inner div -->
+        <div class="container">
+            <!-- BookMyShow Logo -->
+            <a class="navbar-brand me-4" href="#">
+                <img src="/IMAGES/Logo-BookMyShow.png" alt="BookMyShow_Logo" width="110px" />
+            </a>
+
+            <!-- Mobile Toggle Button - Moved to correct position -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible Content -->
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <!-- Search Bar - Improved responsiveness -->
+                <form class="d-flex me-3 flex-grow-1" role="search">
+                    <input class="form-control me-2" type="search"
+                        placeholder="Search For Movies, Events, Plays, Sports and Activities" aria-label="Search"
+                        data-bs-toggle="modal" data-bs-target="#exampleModalToggle" />
+                </form>
+
+                <!-- Right side items -->
+                <div class="d-flex align-items-center">
+                    <!-- City choose option -->
+                    <button type="button" class="btn btn-outline-secondary me-2 me-lg-3" id="city_btn"
+                        data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Ahemdabad <i class="fa-solid fa-angle-down ms-2"></i>
+                    </button>
+
+                    <!-- Sign in button -->
+                    <button type="button" class="btn btn-danger me-2 me-lg-0" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">
+                        Sign in
+                    </button>
+
+                    <!-- Hamburger Menu -->
+                    <button class="btn btn-link text-dark p-0 ms-2 ms-lg-3" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasMenu">
+                        <i class="fa-solid fa-bars fa-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--City  Modal -->
+    <!-- City Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <form class="w-100" role="search">
+                        <input class="form-control" type="search" placeholder="Search For Cities" aria-label="Search" />
+                    </form>
+                </div>
+                <div class="modal-body">
+                    <p class="text-danger text-start mb-3">
+                        <i class="fa-solid fa-location-crosshairs text-danger"></i> Detect My Location
+                    </p>
+                    <p class="text-center fs-5 mb-4">Popular Cities</p>
+
+                    <!-- Responsive Grid for Cities -->
+                    <div class="row g-3 text-center" id="city_section">
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                            <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/mumbai.png"
+                                alt="Mumbai" class="img-fluid" />
+                            <div>Mumbai</div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                            <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/ncr.png"
+                                alt="Delhi-NCR" class="img-fluid" />
+                            <div>Delhi-NCR</div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                            <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/bang.png"
+                                alt="Bengaluru" class="img-fluid" />
+                            <div>Bengaluru</div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                            <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/hyd.png"
+                                alt="Hyderabad" class="img-fluid" />
+                            <div>Hyderabad</div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                            <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/ahd-selected.png"
+                                alt="Ahmedabad" class="img-fluid" />
+                            <div>Ahmedabad</div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                            <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/chd.png"
+                                alt="Chandigarh" class="img-fluid" />
+                            <div>Chandigarh</div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                            <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/chen.png"
+                                alt="city1" srcset="" />
+                            <div>Chennai</div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                            <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/pune.png"
+                                alt="city1" srcset="" />
+                            <div>Pune</div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                            <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/kolk.png"
+                                alt="city1" srcset="" />
+                            <div>Kolkata</div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                            <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/koch.png"
+                                alt="city1" srcset="" />
+                            <div>Kochi</div>
+                        </div>
+
+                        <!-- Add remaining cities with same structure -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sign Modal -->
+    <!-- Sign Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header text-center border-0">
+                    <h5 class="modal-title w-100" id="exampleModalLabel">Get Started</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <!-- Google Button -->
+                        <div class="mb-3">
+                            <button type="button" class="btn btn-outline-secondary w-100 position-relative py-2">
+                                <i class="fa-brands fa-google position-absolute start-0 ms-3"></i>
+                                <span>Continue With Google</span>
+                            </button>
+                        </div>
+
+                        <!-- Email Button -->
+                        <div class="mb-3">
+                            <button type="button" class="btn btn-outline-secondary w-100 position-relative py-2">
+                                <i class="fa-solid fa-envelope position-absolute start-0 ms-3"></i>
+                                <span>Continue With Email</span>
+                            </button>
+                        </div>
+
+                        <!-- Apple Button -->
+                        <div class="mb-3">
+                            <button type="button" class="btn btn-outline-secondary w-100 position-relative py-2">
+                                <i class="fa-brands fa-apple position-absolute start-0 ms-3"></i>
+                                <span>Continue With Apple</span>
+                            </button>
+                        </div>
+
+                        <div class="text-center my-3">
+                            <span class="bg-white px-3">OR</span>
+                        </div>
+                        <hr>
+
+                        <!-- Mobile Input -->
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <span class="input-group-text">+91</span>
+                                <input type="tel" class="form-control" placeholder="Mobile Number" />
+                            </div>
+                        </div>
+
+                        <!-- Terms Checkbox -->
+                        <div class="form-check mt-4">
+                            <input class="form-check-input" type="checkbox" id="termsCheck" />
+                            <label class="form-check-label small" for="termsCheck">
+                                I agree to the Terms & Conditions & Privacy Policy
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Humberger Offcanvas Menu -->
+    <!-- Hamburger Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Hey!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body p-0">
+            <!-- Rewards Section -->
+            <div class="p-3 border-bottom">
+                <div class="d-flex align-items-center gap-3">
+                    <img src="/IMAGES/rewards_login.avif" alt="rewards_login" class="img-fluid" width="55" />
+                    <div class="flex-grow-1">
+                        <p class="mb-1 small fw-semibold">Unlock Special Offers & Great Benefits</p>
+                        <button class="btn btn-danger btn-sm w-100">Login/Register</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Items -->
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action border-0 py-3">
+                    <i class="fa-regular fa-bell me-3"></i>Notification
+                </a>
+                <a href="#" class="list-group-item list-group-item-action border-0 py-3">
+                    <i class="fa-solid fa-bag-shopping me-3"></i>Your Orders
+                </a>
+                <a href="#" class="list-group-item list-group-item-action border-0 py-3">
+                    <i class="fa-solid fa-bars-staggered me-3"></i>Stream Library
+                </a>
+                <a href="#" class="list-group-item list-group-item-action border-0 py-3">
+                    <i class="fa-regular fa-credit-card me-3"></i>Play Credit Card
+                </a>
+                <a href="#" class="list-group-item list-group-item-action border-0 py-3">
+                    <i class="fa-regular fa-envelope me-3"></i>Help & Support
+                </a>
+                <a href="#" class="list-group-item list-group-item-action border-0 py-3">
+                    <i class="fa-solid fa-gear me-3"></i>Account & Settings
+                </a>
+                <a href="#" class="list-group-item list-group-item-action border-0 py-3">
+                    <i class="fa-solid fa-gift me-3"></i>Rewards
+                </a>
+                <a href="#" class="list-group-item list-group-item-action border-0 py-3">
+                    <i class="fa-regular fa-bookmark me-3"></i>BookAchange
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Serch Model -->
+    <!-- Full screen modal Start-->
+    <!-- Search Modal -->
+    <div class="modal fade" id="exampleModalToggle" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <!-- Header -->
+                <div class="modal-header">
+                    <form class="w-100 me-3">
+                        <input type="text" placeholder="Search For Movies, Events, Plays & more"
+                            class="form-control form-control-lg" />
+                    </form>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Search Categories -->
+                <div class="px-3 py-2 border-bottom">
+                    <div class="d-flex flex-wrap gap-2">
+                        <button class="btn btn-outline-primary btn-sm">Movies</button>
+                        <button class="btn btn-outline-secondary btn-sm">Stream</button>
+                        <button class="btn btn-outline-secondary btn-sm">Events</button>
+                        <button class="btn btn-outline-secondary btn-sm">Plays</button>
+                        <button class="btn btn-outline-secondary btn-sm">Sports</button>
+                        <button class="btn btn-outline-secondary btn-sm">Activities</button>
+                    </div>
+                </div>
+
+                <!-- Recent Searches -->
+                <div class="modal-body">
+                    <h6 class="fw-semibold mb-3">Recent Searches</h6>
+                    <div class="list-group list-group-flush">
+                        <a href="#"
+                            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            The Ba***ds of Bollywood
+                            <i class="fa-solid fa-film text-muted"></i>
+                        </a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            Avengers End:Game
+                            <i class="fa-solid fa-film text-muted"></i>
+                        </a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            One Battle After Another
+                            <i class="fa-solid fa-film text-muted"></i>
+                        </a>
+                        <!-- Add other recent searches with same structure -->
+                    </div>
+                </div>
+
+                <!-- Trending Searches -->
+                <div class="modal-body border-top">
+                    <h6 class="fw-semibold mb-3">Trending Searches</h6>
+                    <div class="list-group list-group-flush">
+                        <a href="#"
+                            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            The Ba***ds of Bollywood
+                            <i class="fa-solid fa-film text-muted"></i>
+                        </a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            Salaar Part-1
+                            <i class="fa-solid fa-film text-muted"></i>
+                        </a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            Lokah: Chapter 1 - Chandra
+                            <i class="fa-solid fa-film text-muted"></i>
+                        </a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            Demon Slayer: Kimetsu no Yaiba Infinity Castle
+                            <i class="fa-solid fa-film text-muted"></i>
+                        </a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            Kantara: A Lagend Chapter:1
+                            <i class="fa-solid fa-film text-muted"></i>
+                        </a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            War2
+                            <i class="fa-solid fa-film text-muted"></i>
+                        </a>
+                        <!-- Add other trending searches with same structure -->
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Full Screen Modal End -->
+
+    <!-- Second Navbar section Start -->
+    <div class="container-fluid mt-1" style="background-color:#abadae24;">
+        <div class="container">
+            <div class="col-12">
+                <!-- Add flex-wrap and responsive text alignment -->
+                <div class="row secnav_sec p-2 flex-wrap">
+                    <!-- Change col-5 to responsive columns -->
+                    <div class="col-12 col-md-6 col-lg-5">
+                        <!-- Add flex-wrap and spacing for mobile -->
+                        <div class="left d-flex flex-wrap gap-2 gap-md-3">
+                            <a href="#" class="text-nowrap">Movies</a>
+                            <a href="#" class="text-nowrap">Stream</a>
+                            <a href="#" class="text-nowrap">Events</a>
+                            <a href="#" class="text-nowrap">Sports</a>
+                            <a href="#" class="text-nowrap">Plays</a>
+                            <a href="#" class="text-nowrap">Activities</a>
+                        </div>
+                    </div>
+                    <!-- Change col-5 to responsive columns -->
+                    <div class="col-12 col-md-6 col-lg-5 mt-2 mt-md-0">
+                        <!-- Add flex-wrap and spacing for mobile -->
+                        <div class="right d-flex flex-wrap gap-2 gap-md-3">
+                            <a href="#" class="text-nowrap">Listyourshow</a>
+                            <a href="#" class="text-nowrap">Corporates</a>
+                            <a href="#" class="text-nowrap">offers</a>
+                            <a href="#" class="text-nowrap">Gift Cards</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Second Navbar section End -->
+
+    <!-- First carousel Start -->
+    <div class="container-fluid rounded-3">
+
+
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/IMAGES/1-sliderimg.avif" class="d-block rounded-3" alt="..." width="100%">
+                </div>
+                <div class="carousel-item">
+                    <img src="/IMAGES/2-sliderimg.avif" class="d-block rounded-3" alt="..." width="100%">
+                </div>
+                <div class="carousel-item">
+                    <img src="/IMAGES/3sliderimg.avif" class="d-block rounded-3" alt="..." width="100%">
+                </div>
+                <div class="carousel-item">
+                    <img src="/IMAGES/4sliderimg.avif" class="d-block rounded-3" alt="..." width="100%">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- First Carousel End -->
+
+
+    <!-- Second Carousel Start -->
+    <div class="container mt-3">
+        <!-- Change heading section to responsive -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="fs-4 fw-bold ms-4">Recomanded Movies</h2>
+            <a href="#" class="text-danger fs-6 text-nowrap">See All</a>
+        </div>
+
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <!-- Change to responsive grid -->
+                    <div class="row g-3 g-md-4  justify-content-around gap-1">
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                            <img src="/IMAGES/1portrait.avif" class=" rounded-3 img-fluid" width="200" height="320">
+                            <p class="fw-bold fs-6 mt-2 mb-1">Sunny Sanskari Ki Tulsi Kumari</p>
+                            <span class="fw-normal fs-6 text-muted">Comedy/Romantic</span>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                            <img src="/IMAGES/6portrait.avif" class=" rounded-3 img-fluid" width="200" height="320">
+                            <p class="fw-bold fs-6 mt-2 mb-1">Demon Slayer</p>
+                            <span class="fw-normal fs-6 text-muted">Adventure/Action/Anime</span>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                            <img src="/IMAGES/3portrait.avif" class=" rounded-3 img-fluid" width="200" height="320">
+                            <p class="fw-bold fs-6 mt-2 mb-1">Kantara: A Legend Chapter-1</p>
+                            <span class="fw-normal fs-6 text-muted">Thriller/Adventure/Drama</span>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                            <img src="/IMAGES/4portrait.avif" class=" rounded-3 img-fluid" width="200" height="320">
+                            <p class="fw-bold fs-6 mt-2 mb-1">Lokha: Chapter 1 - Chandra</p>
+                            <span class="fw-normal fs-6 text-muted">Comedy/Action/Fantasy</span>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center d-none d-md-block">
+                            <img src="/IMAGES/5portrait.avif" class=" rounded-3 img-fluid" width="200" height="320">
+                            <p class="fw-bold fs-6 mt-2 mb-1">They Call Him OG</p>
+                            <span class="fw-normal fs-6 text-muted">Crime/Action/Drama/Thriller</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 Slide -->
+                <div class="carousel-item">
+                    <div class="row g-3 g-md-4 justify-content-center gap-4">
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                            <img src="/IMAGES/A-Minecraft-Movie.avif" class="img-fluid rounded-3 w-100" width="225"
+                                height="350">
+                            <p class="fw-bold fs-6 mt-2 mb-1">Minecraft Movie</p>
+                            <span class="fw-normal fs-6 text-muted">Animation/Adventure</span>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                            <img src="/IMAGES/Jaat.avif" class="img-fluid rounded-3 w-100" width="225" height="350">
+                            <p class="fw-bold fs-6 mt-2 mb-1">Jaat</p>
+                            <span class="fw-normal fs-6 text-muted">Action/Adventure/Thriller</span>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                            <img src="/IMAGES/Chhaava.avif" class="img-fluid rounded-3 w-100" width="225" height="350">
+                            <p class="fw-bold fs-6 mt-2 mb-1">Chhaava Movie</p>
+                            <span class="fw-normal fs-6 text-muted">Historicle/Adventure/Action</span>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                            <img src="/IMAGES/interstellar.avif" class=" rounded-3 " width="200" height="320">
+                            <p class="fw-bold fs-6 mt-2 mb-1">Interstellar Movie</p>
+                            <span class="fw-normal fs-6 text-muted">Animation/Adventure</span>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center d-none d-md-block">
+                            <img src="/IMAGES/eternal-sunshine.avif" class=" rounded-3" width="200" height="320">
+                            <p class="fw-bold fs-6 mt-2 mb-1">eternal-sunshine Movie</p>
+                            <span class="fw-normal fs-6 text-muted">Action/Drama/Thriller</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Second Carousel End -->
+
+    <!-- Second Container Start -->
+    <div class="container">
+        <div class="second_section text-center my-5">
+            <!-- Just add img-fluid class -->
+            <img src="/IMAGES/2nd-Container.avif" class="img-fluid rounded-3 " alt="" style="max-width: 97%;">
+        </div>
+    </div>
+    <!-- Second Container End -->
+
+    <!-- Live Events Section Start -->
+    <div class="container">
+        <p class="fs-4 fw-bold mt-5 ms-3">The Best Of Live Events</p>
+
+        <div id="carouselExample2" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <!-- Change to responsive grid -->
+                    <div class="row g-3 g-md-4 justify-content-around">
+                        <div class="col-6 col-sm-4 col-md-3 col-lg text-center">
+                            <img src="/IMAGES/1live-events.avif" class="img-fluid rounded-3 " width="200">
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg text-center">
+                            <img src="/IMAGES/2live-events.avif" class="img-fluid rounded-3 " width="200">
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg text-center">
+                            <img src="/IMAGES/3live-events.avif" class="img-fluid rounded-3 " width="200">
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg text-center  d-md-block">
+                            <img src="/IMAGES/4 live-events.avif" class="img-fluid rounded-3 " width="200">
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg text-center d-none d-lg-block">
+                            <img src="/IMAGES/5 live-events.avif" class="img-fluid rounded-3 " width="200">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 - Use same structure -->
+                <div class="carousel-item">
+                    <div class="row g-3 g-md-4 justify-content-around">
+                        <div class="col-6 col-sm-4 col-md-3 col-lg text-center">
+                            <img src="/IMAGES/6 live-event.avif" class="img-fluid rounded-3 " width="200">
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg text-center">
+                            <img src="/IMAGES/1live-events.avif" class="img-fluid rounded-3 " width="200">
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg text-center">
+                            <img src="/IMAGES/3live-events.avif" class="img-fluid rounded-3 " width="200">
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg text-center d-none d-md-block">
+                            <img src="/IMAGES/7live-eventsavif.avif" class="img-fluid rounded-3 " width="200">
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg text-center  d-lg-block">
+                            <img src="/IMAGES/4 live-events.avif" class="img-fluid rounded-3 " width="200">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Live Events Section End -->
+
+
+    <!-- Premiere Section Start -->
+    <div class="container-fluid mt-5 p-2" style="background-color: #2b3148;">
+        <div class="container">
+            <div class="Premiere_img ms-3">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120/premiere-banner-web-collection-202208191200.png"
+                    alt="" srcset="" class="img-fluid w-100">
+            </div>
+            <div class="Premiere_heading">
+                <h1 class="text-white fw-bold fs-3 ms-3">Premiere</h1>
+                <p class="text-white fs-6 ms-3">Brand new releases every friday</p>
+            </div>
+
+            <div id="carouselExample3" class="carousel slide">
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row g-3 g-md-4 justify-content-around">
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                                <div class="movie-card">
+                                    <img src="/IMAGES/1premeie.avif" class="rounded-3 img-fluid"
+                                        alt="Neighborhood Watch">
+                                    <p class="fw-bold fs-6 mt-2 mb-1 text-white">Neighborhood Watch</p>
+                                    <span class="fw-normal fs-6 text-white">English</span>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                                <div class="movie-card">
+                                    <img src="/IMAGES/2premire.avif" class="rounded-3 img-fluid" alt="Ya Re Ya Paisa 3">
+                                    <p class="fw-bold fs-6 mt-2 mb-1 text-white">Ya Re Ya Paisa 3</p>
+                                    <span class="fw-normal fs-6 text-white">Marathi</span>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                                <div class="movie-card">
+                                    <img src="/IMAGES/3premire.avif" class="rounded-3 img-fluid"
+                                        alt="Hashtag Tadev Lagnam">
+                                    <p class="fw-bold fs-6 mt-2 mb-1 text-white">Hashtag Tadev Lagnam</p>
+                                    <span class="fw-normal fs-6 text-white">Marathi</span>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                                <div class="movie-card">
+                                    <img src="/IMAGES/4premire.avif" class="rounded-3 img-fluid" alt="Bring Her Back">
+                                    <p class="fw-bold fs-6 mt-2 mb-1 text-white">Bring Her Back</p>
+                                    <span class="fw-normal fs-6 text-white">English</span>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                                <div class="movie-card">
+                                    <img src="/IMAGES/5premire.avif" class="rounded-3 img-fluid" alt="Being Maria">
+                                    <p class="fw-bold fs-6 mt-2 mb-1 text-white">Being Maria</p>
+                                    <span class="fw-normal fs-6 text-white">French</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row g-3 g-md-4 justify-content-around">
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                                <div class="movie-card">
+                                    <img src="/IMAGES/Sikandar.avif" class="rounded-3 img-fluid"
+                                        alt="The Matrix Resurrections">
+                                    <p class="fw-bold fs-6 mt-2 mb-1 text-white">The Matrix Resurrections</p>
+                                    <span class="fw-normal fs-6 text-white">English</span>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                                <div class="movie-card">
+                                    <img src="/IMAGES/the-dark-knight-rises.avif" class="rounded-3 "
+                                        alt="The Dark Knight Rises">
+                                    <p class="fw-bold fs-6 mt-2 mb-1 text-white">The Dark Knight Rises</p>
+                                    <span class="fw-normal fs-6 text-white">English</span>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                                <div class="movie-card">
+                                    <img src="/IMAGES/the-matrix-resurrections.avif" class="rounded-3 "
+                                        alt="The Diplomat">
+                                    <p class="fw-bold fs-6 mt-2 mb-1 text-white">The Diplomat</p>
+                                    <span class="fw-normal fs-6 text-white">English</span>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                                <div class="movie-card">
+                                    <img src="/IMAGES/The-Diplomat.avif" class="rounded-3 img-fluid"
+                                        alt="Jija Sala Jija">
+                                    <p class="fw-bold fs-6 mt-2 mb-1 text-white">Jija Sala Jija</p>
+                                    <span class="fw-normal fs-6 text-white">Hindi</span>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                                <div class="movie-card">
+                                    <img src="/IMAGES/Kesari-chapter-2.avif" class="rounded-3 img-fluid" alt="Jaat">
+                                    <p class="fw-bold fs-6 mt-2 mb-1 text-white">Jaat</p>
+                                    <span class="fw-normal fs-6 text-white">Hindi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Premiere Section End -->
+
+
+
+    <!-- Third Carousel Start -->
+    <div class="container-fluid my-1 p-3 p-md-5" style="background-color: #6c757d21;">
+        <div class="container mt-3">
+            <!-- Fixed heading section -->
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="fs-4 fw-semibold  ms-4">Laughter Therapy</h2>
+                <a href="#" class="text-danger fs-6 text-nowrap">See All</a>
+            </div>
+
+            <div id="carouselExample4" class="carousel slide">
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <!-- Change to responsive grid -->
+                        <div class="row g-3 g-md-4 justify-content-around gap-3">
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                                <img src="/IMAGES/1laughter.avif" class=" rounded-3 img-fluid " width="200"
+                                    height="320">
+                                <p class="fw-bold fs-6 mt-2 mb-1">VirDas - Sound Of India</p>
+                                <span class="fw-normal fs-6 text-muted">Sir Mutha Vaikhanthsarao Concert Hall</span>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                                <img src="/IMAGES/2laughter.avif" class=" rounded-3 img-fluid " width="200"
+                                    height="320">
+                                <p class="fw-bold fs-6 mt-2 mb-1">Gaurav Kapoor Live</p>
+                                <span class="fw-normal fs-6 text-muted">Rashika Ranjani Sabha</span>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                                <img src="/IMAGES/3laughter.avif" class=" rounded-3 img-fluid " width="200"
+                                    height="320">
+                                <p class="fw-bold fs-6 mt-2 mb-1">Thug Aagahda Life</p>
+                                <span class="fw-normal fs-6 text-muted">Punch Unpaid Theropieast</span>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                                <img src="/IMAGES/4laughter.avif" class=" rounded-3 img-fluid " width="200"
+                                    height="320">
+                                <p class="fw-bold fs-6 mt-2 mb-1">Happly Unmarried</p>
+                                <span class="fw-normal fs-6 text-muted">Punch Unpaid Theropieast</span>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center d-none d-md-block">
+                                <img src="/IMAGES/5laughter.avif" class=" rounded-3 img-fluid " width="200"
+                                    height="320">
+                                <p class="fw-bold fs-6 mt-2 mb-1">Do You Know Who I Am?</p>
+                                <span class="fw-normal fs-6 text-muted">Medal-The Stage Chennai</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row g-3 g-md-4 justify-content-around gap-4">
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                                <img src="/IMAGES/A-Minecraft-Movie.avif" class="img-fluid rounded-3  " width="200"
+                                    height="320">
+                                <p class="fw-bold fs-6 mt-2 mb-1">Minecraft Movie</p>
+                                <span class="fw-normal fs-6 text-muted">Animation/Adventure</span>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                                <img src="/IMAGES/Jaat.avif" class="img-fluid rounded-3  " width="200" height="320">
+                                <p class="fw-bold fs-6 mt-2 mb-1">Jaat</p>
+                                <span class="fw-normal fs-6 text-muted">Action/Drama</span>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                                <img src="/IMAGES/Chhaava.avif" class="img-fluid rounded-3  " width="200" height="320">
+                                <p class="fw-bold fs-6 mt-2 mb-1">Chhaava</p>
+                                <span class="fw-normal fs-6 text-muted">Historical/Drama</span>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                                <img src="/IMAGES/interstellar.avif" class=" rounded-3 " width="200" height="320">
+
+                                <p class="fw-bold fs-6 mt-2 mb-1">Eternal Sunshine</p>
+                                <span class="fw-normal fs-6 text-muted">Romance/Drama</span>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center d-none d-md-block">
+                                <img src="/IMAGES/eternal-sunshine.avif" class=" rounded-3 " width="200" height="320">
+
+                                <p class="fw-bold fs-6 mt-2 mb-1">Interstellar</p>
+                                <span class="fw-normal fs-6 text-muted">Sci-Fi/Adventure</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample4"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample4"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Third Carousel End -->
+
+
+    <!-- Fourth Crousal Start -->
+
+    <div class="container mt-3 ">
+        <div class="d-flex ">
+            <h2 class="text-justify fs-4 fw-semibold ms-3">The Latest Play</h2>
+            <a href="#" class="text-danger fs-6 ms-3" style="position: absolute; right: 150px;">See All</a>
+        </div>
+
+        <div id="carouselExample5" class="carousel slide">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <!-- Change to responsive grid -->
+                    <div class="row g-3 g-md-4 justify-content-around gap-3">
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                            <img src="/IMAGES/2dportrait.avif" class=" rounded-3 img-fluid " width="200" height="320">
+                            <p class="fw-bold fs-6 mt-2 mb-1">Idali Kadai</p>
+                            <span class="fw-normal fs-6 text-muted">Comedy/Romantic</span>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                            <img src="/IMAGES/All-the-Best-Pandya.avif" class=" rounded-3 img-fluid " width="200"
+                                height="320">
+                            <p class="fw-bold fs-6 mt-2 mb-1">All The Best Pandya</p>
+                            <span class="fw-normal fs-6 text-muted">Advanture/Action/Anime</span>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                            <img src="/IMAGES/Chhaava.avif" class=" rounded-3 img-fluid " width="200" height="320">
+                            <p class="fw-bold fs-6 mt-2 mb-1">Chhaava</p>
+                            <span class="fw-normal fs-6 text-muted">Historical/Action/Fantsy</span>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                            <img src="/IMAGES/avatar.avif" class=" rounded-3  " width="200" height="320">
+                            <!-- <img src="/IMAGES/interstellar.avif" class=" rounded-3 " width="200" height="320"> -->
+
+                            <p class="fw-bold fs-6 mt-2 mb-1">Avatar - The Way Of Water</p>
+                            <span class="fw-normal fs-6 text-muted">Drama/Thriller/Action</span>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                            <img src="/IMAGES/Jija-Sala-Jija.avif" class=" rounded-3 img-fluid " width="200"
+                                height="320">
+                            <p class="fw-bold fs-6 mt-2 mb-1">Jija Sala Jija</p>
+                            <span class="fw-normal fs-6 text-muted">Comedy/Action/Drama/Thriller</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="row g-3 g-md-4 justify-content-around gap-4">
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                            <img src="/IMAGEs/Kesari-chapter-2.avif" class="img-fluid rounded-3  " width="200"
+                                height="320">
+                            <p class="fw-bold fs-6 mt-2 mb-1">Minecraft Movie</p>
+                            <span class="fw-normal fs-6 text-muted">Animation/Adventure</span>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                            <img src="/IMAGES/the-matrix-resurrections.avif" class=" rounded-3  " width="200"
+                                height="320">
+                            <p class="fw-bold fs-6 mt-2 mb-1">Minecraft Movie</p>
+                            <span class="fw-normal fs-6 text-muted">Animation/Adventure</span>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                            <img src="/IMAGES/The-Diplomat.avif" class="img-fluid rounded-3  " width="200" height="320">
+                            <p class="fw-bold fs-6 mt-2 mb-1">Minecraft Movie</p>
+                            <span class="fw-normal fs-6 text-muted">Animation/Adventure</span>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                            <img src="/IMAGES/Jaat.avif" class="img-fluid rounded-3  " width="200" height="320">
+                            <p class="fw-bold fs-6 mt-2 mb-1">Minecraft Movie</p>
+                            <span class="fw-normal fs-6 text-muted">Animation/Adventure</span>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                            <img src="/IMAGES/Sikandar.avif" class="img-fluid rounded-3  " width="200" height="320">
+                            <p class="fw-bold fs-6 mt-2 mb-1">Minecraft Movie</p>
+                            <span class="fw-normal fs-6 text-muted">Animation/Adventure</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample5" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample5" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+    <!-- Fourth Crousal End -->
+
+
+    <!-- Fifhth Crousal Start -->
+
+    <div class="container mt-3">
+        <!-- Fixed heading section -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="fs-4 fw-semibold ms-4">Explore Fun Activities</h2>
+            <a href="#" class="text-danger fs-6 text-nowrap">See All</a>
+        </div>
+
+        <div id="carouselExample6" class="carousel slide">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <!-- Change to responsive grid -->
+                    <div class="row g-3 g-md-4 justify-content-around">
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                            <img src="/IMAGES/1explore.avif" class="img-fluid rounded-3 " width="200" height="320">
+                            <p class="fw-bold fs-6 mt-2 mb-1">CLAM CHOR & UDDHAV LIVE</p>
+                            <span class="fw-normal fs-6 text-muted">The Park Hotel: Chennai</span>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                            <img src="/IMAGES/2explore.avif" class="img-fluid rounded-3 " width="200" height="320">
+                            <p class="fw-bold fs-6 mt-2 mb-1">Tipsy Tuesdays Ft. DJ Gavin</p>
+                            <span class="fw-normal fs-6 text-muted">Hard Rock Cafe Chennai</span>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                            <img src="/IMAGES/3explore.avif" class="img-fluid rounded-3 " width="200" height="320">
+                            <p class="fw-bold fs-6 mt-2 mb-1">VGP Cyber Kingdom-Chennai</p>
+                            <span class="fw-normal fs-6 text-muted">VGP Cyber Kingdom-Chennai</span>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                            <img src="/IMAGES/4explore.avif" class="img-fluid rounded-3 " width="200" height="320">
+                            <p class="fw-bold fs-6 mt-2 mb-1">Bollywood Night Ft. DJ Bugsy</p>
+                            <span class="fw-normal fs-6 text-muted">Hard Rock Cafe Chennai</span>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center d-none d-md-block">
+                            <img src="/IMAGES/5explore.avif" class="img-fluid rounded-3 " width="200" height="320">
+                            <p class="fw-bold fs-6 mt-2 mb-1">Mystery Rooms-Chennai</p>
+                            <span class="fw-normal fs-6 text-muted">Mystery Rooms-Chennai</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="row g-3 g-md-4 justify-content-around">
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                            <img src="/IMAGES/A-Minecraft-Movie.avif" class="img-fluid rounded-3 " width="200"
+                                height="320">
+                            <p class="fw-bold fs-6 mt-2 mb-1">Minecraft Movie</p>
+                            <span class="fw-normal fs-6 text-muted">Animation/Adventure</span>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                            <img src="/IMAGES/Jaat.avif" class="img-fluid rounded-3 " width="200" height="320">
+                            <p class="fw-bold fs-6 mt-2 mb-1">Jaat</p>
+                            <span class="fw-normal fs-6 text-muted">Action/Drama</span>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                            <img src="/IMAGES/Chhaava.avif" class="img-fluid rounded-3 " width="200" height="320">
+                            <p class="fw-bold fs-6 mt-2 mb-1">Chhaava</p>
+                            <span class="fw-normal fs-6 text-muted">Historical/Drama</span>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                            <img src="/IMAGES/eternal-sunshine.avif" class=" rounded-3 " width="200" height="320">
+                            <p class="fw-bold fs-6 mt-2 mb-1">Eternal Sunshine</p>
+                            <span class="fw-normal fs-6 text-muted">Romance/Drama</span>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center d-none d-md-block">
+                            <img src="/IMAGES/interstellar.avif" class=" rounded-3 " width="200" height="320">
+                            <p class="fw-bold fs-6 mt-2 mb-1">Interstellar</p>
+                            <span class="fw-normal fs-6 text-muted">Sci-Fi/Adventure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample6" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample6" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+    <!-- Fifth Crousal End -->
+
+
+    <!-- Footer1 Section Start-->
+    <div class="container ">
+        <h1 class="fs-4 fw-semibold mt-5 ms-4 text-center text-md-start">Trending Searches Right Now</h1>
+        <div class="footer1_section ms-4 ">
+            <!-- First Row -->
+            <div class="row g-3 g-md-4 text-center">
+                <div class="col-6 col-md-3">
+                    <div class="footer1_text">
+                        <h5 class="text-danger mb-1 fs-6">Kantara: A Legend Chapter-1</h5>
+                        <small class="text-muted">Movies</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="footer1_text">
+                        <h5 class="text-danger mb-1 fs-6">Demon Slayer: Kimetsu no Yaiba</h5>
+                        <small class="text-muted">Movies</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="footer1_text">
+                        <h5 class="text-danger mb-1 fs-6">Lokah: Chapter 1-Chandra</h5>
+                        <small class="text-muted">Movies</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="footer1_text">
+                        <h5 class="text-danger mb-1 fs-6">The Dark Knight Rises</h5>
+                        <small class="text-muted">Movies</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Row -->
+            <div class="row g-3 g-md-4 text-center mt-2 mt-md-3">
+                <div class="col-6 col-md-3">
+                    <div class="footer1_text">
+                        <h5 class="text-danger mb-1 fs-6">Sunny Sanskari Ki Tulsi Kumari</h5>
+                        <small class="text-muted">Movies</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="footer1_text">
+                        <h5 class="text-danger mb-1 fs-6">Hashtag Tadev Lagnam</h5>
+                        <small class="text-muted">Movies</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="footer1_text">
+                        <h5 class="text-danger mb-1 fs-6">They Call Him OG</h5>
+                        <small class="text-muted">Movies</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="footer1_text">
+                        <h5 class="text-danger mb-1 fs-6">Ya Re Ya Paisa 3</h5>
+                        <small class="text-muted">Movies</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer1 Section End-->
+
+
+    <!-- Footer2 Heading Section Start -->
+    <div class="container-fluid mt-5 py-3" style="background-color: #313035;">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start">
+                <div class="col-md-2 text-center text-md-start mb-3 mb-md-0">
+                    <img src="/IMAGES/footer.svg" alt="BookMyShow" class="img-fluid" style="max-height: 40px;">
+                </div>
+                <div class="col-md-7 text-center text-md-start mb-3 mb-md-0">
+                    <p class="text-white fs-6 fw-bold mb-1">List Your Show</p>
+                    <p class="text-white mb-0 small">Got a show, event, activity or a great experience? Partner with us
+                        & get listed on BookMyShow</p>
+                </div>
+                <div class="col-md-3 text-center text-md-end">
+                    <button class="btn btn-danger btn-sm">Contact today!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer2 Heading Section End -->
+
+    <!-- Footer2 Icon Section Start -->
+    <div class="container-fluid py-4" style="background-color: #404043;">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-4 mb-3">
+                    <i class="fa-solid fa-user-secret text-white mb-2" style="font-size: 2.5rem;"></i>
+                    <div>
+                        <small class="text-white">24/7 Customer Care</small>
+                    </div>
+                </div>
+                <div class="col-4 mb-3">
+                    <i class="fa-solid fa-ticket text-white mb-2" style="font-size: 2.5rem;"></i>
+                    <div>
+                        <small class="text-white">Resend Booking Confirmation</small>
+                    </div>
+                </div>
+                <div class="col-4 mb-3">
+                    <i class="fa-solid fa-newspaper text-white mb-2" style="font-size: 2.5rem;"></i>
+                    <div>
+                        <small class="text-white">Subscribe to the Newsletter</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer2 Icon Section End -->
+
+
+    <!-- footer2 description section start -->
+    <div class="container-fluid p-2" style="background-color: #333338;">
+        <div class="container ">
+            <div class="description">
+                <h6>MOVIES NOW SHOWING IN CHENNAI</h6>
+                <a href="#">Sunny Sanskari Ki Tulsi Kumari | </a>
+                <a href="#">Hashtag Tadev Lagnam |</a>
+                <a href="#">They Call Him OG |</a>
+                <a href="#">The Dark: the-dark-knight-rises |</a>
+                <a href="#">Kantara: A Lagend Chapter-1 | </a>
+                <a href="#">Demon Slayer: Kimetsu no Yaiba Infinity Castle |</a>
+                <a href="#">Lokah: Chapter 1-Chandra |</a>
+                <a href="#">The Ba***ds of Bollywood |</a>
+                <a href="#">Salara Part:1 |</a>
+                <a href="#">Avengers: End Game |</a>
+            </div>
+            <div class="description">
+                <h6>UPCOMING MOCIES IN CHENNAI</h6>
+                <a href="#">Sunny Sanskari Ki Tulsi Kumari | </a>
+
+                <a href="#">The Dark: the-dark-knight-rises |</a>
+                <a href="#">Kantara: A Lagend Chapter-1 | </a>
+                <a href="#">Demon Slayer: Kimetsu no Yaiba Infinity Castle |</a>
+                <a href="#">Lokah: Chapter 1-Chandra |</a>
+            </div>
+            <div class="description">
+                <h6>MOVIES BY GENRE</h6>
+                <a href="#">Sunny Sanskari Ki Tulsi Kumari | </a>
+                <a href="#">Sunny Sanskari Ki Tulsi Kumari | </a>
+                <a href="#">Hashtag Tadev Lagnam |</a>
+                <a href="#">They Call Him OG |</a>
+                <a href="#">The Dark: the-dark-knight-rises |</a>
+                <a href="#">The Dark: the-dark-knight-rises |</a>
+                <a href="#">Kantara: A Lagend Chapter-1 | </a>
+                <a href="#">Demon Slayer: Kimetsu no Yaiba Infinity Castle |</a>
+                <a href="#">Lokah: Chapter 1-Chandra |</a>
+            </div>
+            <div class="description">
+                <h6>MOVIES BY LANGUAGE</h6>
+                <a href="#">Sunny Sanskari Ki Tulsi Kumari | </a>
+                <a href="#">Hashtag Tadev Lagnam |</a>
+                <a href="#">They Call Him OG |</a>
+                <a href="#">Lokah: Chapter 1-Chandra |</a>
+            </div>
+            <div class="description">
+                <h6>SPORTS EVENT IN CHENNAI</h6>
+                <a href="#">Sunny Sanskari Ki Tulsi Kumari | </a>
+                <a href="#">Hashtag Tadev Lagnam |</a>
+                <a href="#">They Call Him OG |</a>
+                <a href="#">Sunny Sanskari Ki Tulsi Kumari | </a>
+                <a href="#">Hashtag Tadev Lagnam |</a>
+
+                <a href="#">The Dark: the-dark-knight-rises |</a>
+                <a href="#">Kantara: A Lagend Chapter-1 | </a>
+                <a href="#">Demon Slayer: Kimetsu no Yaiba Infinity Castle |</a>
+                <a href="#">Lokah: Chapter 1-Chandra |</a>
+            </div>
+            <div class="description">
+                <h6>EVENTS IN TOP CITIES</h6>
+
+                <a href="#">They Call Him OG |</a>
+                <a href="#">The Dark: the-dark-knight-rises |</a>
+                <a href="#">Kantara: A Lagend Chapter-1 | </a>
+                <a href="#">Demon Slayer: Kimetsu no Yaiba Infinity Castle |</a>
+                <a href="#">Lokah: Chapter 1-Chandra |</a>
+            </div>
+            <div class="description">
+                <h6>CIMEMAS IN TOP CITIES</h6>
+                <a href="#">Sunny Sanskari Ki Tulsi Kumari | </a>
+                <a href="#">Hashtag Tadev Lagnam |</a>
+                <a href="#">Hashtag Tadev Lagnam |</a>
+                <a href="#">They Call Him OG |</a>
+                <a href="#">The Dark: the-dark-knight-rises |</a>
+                <a href="#">Kantara: A Lagend Chapter-1 | </a>
+                <a href="#">Demon Slayer: Kimetsu no Yaiba Infinity Castle |</a>
+                <a href="#">Demon Slayer: Kimetsu no Yaiba Infinity Castle |</a>
+                <a href="#">Lokah: Chapter 1-Chandra |</a>
+            </div>
+            <div class="description">
+                <h6>PLAYS IN TOP CITIES</h6>
+                <a href="#">The Dark: the-dark-knight-rises |</a>
+                <a href="#">Kantara: A Lagend Chapter-1 | </a>
+                <a href="#">Demon Slayer: Kimetsu no Yaiba Infinity Castle |</a>
+                <a href="#">Lokah: Chapter 1-Chandra |</a>
+            </div>
+            <div class="description">
+                <h6>ACTIIVIIES IN TOP CITIES</h6>
+
+                <a href="#">They Call Him OG |</a>
+                <a href="#">The Dark: the-dark-knight-rises |</a>
+                <a href="#">Kantara: A Lagend Chapter-1 | </a>
+                <a href="#">Demon Slayer: Kimetsu no Yaiba Infinity Castle |</a>
+                <a href="#">Lokah: Chapter 1-Chandra |</a>
+            </div>
+            <div class="description">
+                <h6>MOVIES NOW SHOWING</h6>
+                <a href="#">Sunny Sanskari Ki Tulsi Kumari | </a>
+                <a href="#">Hashtag Tadev Lagnam |</a>
+                <a href="#">They Call Him OG |</a>
+                <a href="#">Kantara: A Lagend Chapter-1 | </a>
+                <a href="#">Demon Slayer: Kimetsu no Yaiba Infinity Castle |</a>
+                <a href="#">Lokah: Chapter 1-Chandra |</a>
+            </div>
+            <div class="description">
+                <h6>COUNTRIES</h6>
+                <a href="#">Sunny Sanskari Ki Tulsi Kumari | </a>
+                <a href="#">Hashtag Tadev Lagnam |</a>
+                <a href="#">Hashtag Tadev Lagnam |</a>
+                <a href="#">They Call Him OG |</a>
+                <a href="#">The Dark: the-dark-knight-rises |</a>
+                <a href="#">Kantara: A Lagend Chapter-1 | </a>
+                <a href="#">Demon Slayer: Kimetsu no Yaiba Infinity Castle |</a>
+                <a href="#">Lokah: Chapter 1-Chandra |</a>
+                <a href="#">Lokah: Chapter 1-Chandra |</a>
+            </div>
+            <div class="description">
+                <h6>HELP</h6>
+
+                <a href="#">They Call Him OG |</a>
+                <a href="#">The Dark: the-dark-knight-rises |</a>
+                <a href="#">Kantara: A Lagend Chapter-1 | </a>
+                <a href="#">Demon Slayer: Kimetsu no Yaiba Infinity Castle |</a>
+                <a href="#">Lokah: Chapter 1-Chandra |</a>
+            </div>
+            <div class="description">
+                <h6>BOOKMYSHOW EXCLUSHIVES</h6>
+                <a href="#">Sunny Sanskari Ki Tulsi Kumari | </a>
+                <a href="#">Hashtag Tadev Lagnam |</a>
+                <a href="#">Hashtag Tadev Lagnam |</a>
+                <a href="#">They Call Him OG |</a>
+                <a href="#">The Dark: the-dark-knight-rises |</a>
+                <a href="#">Kantara: A Lagend Chapter-1 | </a>
+                <a href="#">Demon Slayer: Kimetsu no Yaiba Infinity Castle |</a>
+                <a href="#">Demon Slayer: Kimetsu no Yaiba Infinity Castle |</a>
+                <a href="#">Lokah: Chapter 1-Chandra |</a>
+            </div>
+            <div class="description">
+                <h6>ICC WOMEN'S CRICKET WORLD CUP 2025</h6>
+                <a href="#">Sunny Sanskari Ki Tulsi Kumari | </a>
+                <a href="#">Hashtag Tadev Lagnam |</a>
+
+            </div>
+            <div class="description">
+                <h6>WOMEN CWC 2025 TEAMS(INDIA)</h6>
+                <a href="#">Demon Slayer: Kimetsu no Yaiba Infinity Castle |</a>
+                <a href="#">Sunny Sanskari Ki Tulsi Kumari | </a>
+                <a href="#">Hashtag Tadev Lagnam |</a>
+                <a href="#">They Call Him OG |</a>
+                <a href="#">The Dark: the-dark-knight-rises |</a>
+                <a href="#">Hashtag Tadev Lagnam |</a>
+                <a href="#">Kantara: A Lagend Chapter-1 | </a>
+                <a href="#">Demon Slayer: Kimetsu no Yaiba Infinity Castle |</a>
+                <a href="#">Lokah: Chapter 1-Chandra |</a>
+                <a href="#">Sunny Sanskari Ki Tulsi Kumari | </a>
+            </div>
+            <div class="description">
+                <a href="#">The Dark: the-dark-knight-rises |</a>
+                <h6>WOMEN CWC 2025 TEAMS(SRI LANKA)</h6>
+                <a href="#">Kantara: A Lagend Chapter-1 | </a>
+                <a href="#">Lokah: Chapter 1-Chandra |</a>
+                <a href="#">Sunny Sanskari Ki Tulsi Kumari | </a>
+                <a href="#">Hashtag Tadev Lagnam |</a>
+                <a href="#">Demon Slayer: Kimetsu no Yaiba Infinity Castle |</a>
+                <a href="#">They Call Him OG |</a>
+                <a href="#">The Dark: the-dark-knight-rises |</a>
+                <a href="#">Kantara: A Lagend Chapter-1 | </a>
+                <a href="#">Demon Slayer: Kimetsu no Yaiba Infinity Castle |</a>
+                <a href="#">Lokah: Chapter 1-Chandra |</a>
+            </div>
+            <div class="description">
+                <h6>WOMEN CWC 2025 VENUES IN INDIA</h6>
+                <a href="#">india criket mathes 2025 |</a>
+                <a href="#">new mumbai criket mathes 2025 |</a>
+                <a href="#">vishakapatanam criket mathes 2025|</a>
+                <a href="#">guwahati criket mathes 2025</a>
+
+            </div>
+            <div class="description">
+                <h6>WOMEN CWC 2025 VENUES IN SRI LANKA</h6>
+                <a href="#">colmbo criket mathes 2025 </a>
+
+            </div>
+        </div>
+        <!-- footer2 description section end -->
+
+        <!-- footer bookmyshow logo  -->
+        <div class=" d-flex mt-5">
+            <hr>
+            <img src="/IMAGES/logo.svg" class="mx-4" alt="" srcset="" width="140px">
+            <hr>
+        </div>
+
+        <!-- Footer Icon section -->
+        <div class="footericon d-flex justify-content-center mt-5 ">
+            <i class="fa-brands fa-pinterest fa-xl "></i>
+            <i class="fa-brands fa-youtube fa-xl "></i>
+            <i class="fa-brands fa-instagram fa-xl "></i>
+            <i class="fa-brands fa-linkedin-in fa-xl "></i>
+            <i class="fa-brands fa-x-twitter fa-xl "></i>
+            <i class="fa-brands fa-facebook-f fa-xl "></i>
+        </div>
+
+
+        <div class="mt-4">
+            <p class="text-center" style="color: #7f7f7f; font-size: 12px;">Copyright 2025 © Bigtree
+                Entertainment Pvt.
+                Ltd. All Rights Reserved.<br> The content
+                and images used on this site are copyright protected and copyrights vests with the respective
+                owners. The usage of <br> the content and images on this website is intended to promote the
+                works and no
+                endorsement of the artist shall be implied. Unauthorized use is prohibited and <br> punishable
+                by law.
+            </p>
+        </div>
+    </div>
+    <!-- Footer2 Section End-->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

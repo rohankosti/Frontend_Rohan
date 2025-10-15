@@ -1,0 +1,179 @@
+<html>
+
+<head>
+    <title>Reg Form</title>
+    <style type="text/css">
+        body {
+            font-family: Calibri;
+        }
+
+        input[type="text"] {
+            width: 250px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 77px;
+            height: 27px;
+            position: relative;
+            left: 180px;
+        }
+
+        form {
+            text-align: center;
+            font-family: Calibri;
+            font-size: 20px;
+            border: 3px solid black;
+            width: 600px;
+            margin: 20px auto;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        td:first-child {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        td:last-child {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Form Validation using HTML,CSS,JavaScript</h1>
+    </center>
+    <hr>
+    <form method="POST" id="reg_form">
+        <h2>Registration Form</h2>
+        <table>
+            <tr>
+
+                <td><label>First Name: </label></td>
+                <td>
+                    <input type="text" class="fname" value="" name="fname" placeholder="First Name">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Last Name: </label></td>
+                <td>
+                    <input type="text" class="lname" name="lname" placeholder="Last Name">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Address: </label></td>
+                <td>
+                    <input type="textarea" class="address" size="50" name="address" placeholder="Address">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Gender: </label></td>
+                <td>
+                    <input type="radio" class="gender" name="gender" value="male" checked>Male
+                    <input type="radio" class="gender" name="gender" value="femele">Female
+                </td>
+            </tr>
+            <tr>
+                <td><label>Email Id: </label></td>
+                <td>
+                    <input type="mail" class="email" name="email" placeholder="example@gmail.com">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Mobile: </label></td>
+                <td>
+                    <input type="number" class="mobile" name="mobile">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Course:</label></td>
+                <td>
+                    <select name="course" class="course">
+                        <option value="select course">select course</option>
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="JavaScript">JAVASCRIPT</option>
+                        <option value="Java">JAVA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" class="btn btn-primary w-100">Register</button>
+                    <input type="reset" name="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+
+
+        let fname = document.querySelector(".fname");
+        let lname = document.querySelector(".lname");
+        let address = document.querySelector(".address");
+        let gender = document.querySelector(".gender");
+        let email = document.querySelector(".email");
+        let mobile = document.querySelector(".mobile");
+        let course = document.querySelector(".course");
+
+        let reg_form = document.getElementById("reg_form");
+        console.log(reg_form);
+
+        reg_form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            if (fname.value.length <= 0) {
+                alert("Firsht Name Is Reqiured");
+                fname.focus();
+            }
+
+            else if (lname.value.length <= 0) {
+                alert("Last Name Is Reqwired");
+                lname.focus();
+            }
+
+            else if (address.value.length <= 0) {
+                alert("Addresh Is Required")
+                address.focus();
+            }
+
+            else if (gender.value == null) {
+                console.log(gender.value);
+                alert("Gender Is Require");
+                gender.focus();
+                console.log(gender.value);
+            }
+
+            else if (email.value.length <= 0) {
+                alert("Email Is Reqiured");
+                email.focus();
+            }
+            else if (mobile.value.length <= 0 || mobile.value.length > 10) {
+                alert("Mobile Number Is Required");
+                mobile.focus();
+            }
+            else if (course.value == "select course")
+                // console.log(course.value);
+
+            {
+                alert("Select Course From List");
+                course.focus();
+            }
+            else{
+                 alert("Form Succesfully Sumbit")
+
+            }
+        });
+
+
+
+
+
+    </script>
+</body>
+
+</html>

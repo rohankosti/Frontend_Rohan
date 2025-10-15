@@ -1,0 +1,139 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family:  serif;
+}
+
+
+
+/* header section css start */
+
+.heading {
+  width: 100%;
+  height: 70px;
+  padding: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  color: blue;
+  background-color: white;
+}
+nav {
+  position: relative;
+}
+
+ul {
+  position: absolute;
+  /* flex: left; */
+  left: 70%;
+  bottom: 5px;
+  padding: -10px;
+  /* margin: 10px; */
+}
+
+li {
+  /* margin-top: 0px; */
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+  margin: 5px;
+}
+
+li:hover {
+  background-color: yellow;
+  color: black;
+}
+
+/* header section css complate */
+
+/* main section css start */
+.main {
+  height: 60vh;
+  width: 45%;
+  /* text-align: justify; */
+  background-color: whitesmoke;
+  border: 2px solid black;
+  border-radius: 20px;
+  position: relative;
+  left: 400px;
+  top: 100px;
+ 
+    box-shadow: -8px -7px 20px 17px rgb(243 5 5); 
+  
+  
+}
+.login {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 20px;
+  margin-top: 50px;
+}
+.input_email,
+.input_password {
+  position: relative;
+  left: 190px;
+}
+input[type="email"],
+input[type="password"] {
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  margin: 20px;
+  background-color: rgb(197, 195, 195);
+}
+div[class="p"] {
+  color: rgb(81, 81, 224);
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  left: 340px;
+  bottom: 16px;
+  /* flex: right; */
+}
+
+[class="sumbit"] {
+  height: 46px;
+  width: 136px;
+  position: relative;
+
+  left: 280px;
+  top: 25px;
+  text-align: center;
+  margin: 10px;
+}
+
+input[type="submit"] {
+  background-color: #ff6347a1;
+  padding: 10px;
+  height: 46px;
+  width: 136px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+input[type="submit"]:hover {
+  background-color: #6d84ff;
+  color: rgb(0, 0, 0);
+}
+/* main section css complate */
+
+/* footer section css start */
+
+.footer {
+  background-color: white;
+  color: black;
+  font-size: 25px;
+  height: 120px;
+  width: 100%;
+  position: relative;
+  top: 130px;
+  text-align: center;
+  padding: 50px;
+}
+
+/* footer section css complate */

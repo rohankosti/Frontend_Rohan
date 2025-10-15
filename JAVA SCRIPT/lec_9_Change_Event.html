@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onchange JavaScript Eevent</title>
+    
+</head>
+<body>
+
+<form action="">
+    <label for="">State Name</label> :
+    <select name="states" id="state">
+        <option value="None">None</option>
+        <option value="Gujarat">Gujarat</option>
+        <option value="Rajasthan">Rajasthan</option>
+        <option value="U.P">U.P</option>
+        <option value="MP">MP</option>
+        <option value="Delhi">Delhi</option>
+    </select>
+
+    <label for="">City Name</label> :
+    <select name="cities" id="citie">
+        <option value="None">None</option>
+        <option value="Ahmedabad">Ahmedabad</option>
+        <option value="Jaipur">Jaipur</option>
+        <option value="Meruth">Meruth</option>
+        <option value="Indore">Indore</option>
+        <option value="Delhi">Delhi</option>
+    </select>
+</form>
+<div id="cityName"></div>
+
+<script>
+let cityName = document.querySelector("#citie");
+document.querySelector("#state").addEventListener("change",(e)=>{
+let stateName = document.querySelector("#state").value;
+console.log(stateName);
+    // console.log(e.type);
+    // console.log(e.target);
+    // console.log(document.querySelector("#state").value);
+    if(stateName == "Gujarat"){
+        cityName.value = "Ahmedabad";
+        // console.log(cityName);
+    }else if(stateName == "Rajasthan"){
+        cityName.value = "Jaipur";
+    }else if(stateName == "U.P"){
+        cityName.value = "Meruth";
+    }else if(stateName == "MP"){
+        cityName.value = "Indore";
+    }else if(stateName == "Delhi"){
+        cityName.value = "Delhi";
+    }else{
+        cityName.value = "None";
+    }
+
+});
+</script>
+</body>
+</html>

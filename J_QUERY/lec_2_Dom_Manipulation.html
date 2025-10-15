@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <h2>Dom Manipulation In Jquery</h2>
+
+    <div class="box">
+        box 1
+    </div>
+
+    <div class="box2">
+        box 2
+    </div>
+
+    <div class="box3">
+        box 3
+        set a youtube link use SetAttribute in jq
+        <a href="https://www.youtube.com/watch?v=jTg15DrXhB0&list=RDHO7CRp44s10&index=13" target="_blank">YOUTUBE</a>
+    </div>
+
+    <div class="box4">
+        box 4
+    </div>
+
+    <script src="J_QUERY.js/jquery.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            let all = $("div");
+            console.log(all);
+            $("div").css({
+                "width": "200px",
+                "background-color": "royalblue",
+                "height": "200px",
+                "border": "2px solid black",
+                "margin": "5px",
+                "font-size": "18px",
+                "color": "white",
+                "text-align": "center",
+            })
+            let ex = $(".box").text("Rohan Koshti");
+            console.log(ex.text());
+
+            let box2 = $(".box2");
+            // console.log(box2.text());
+            $(".box2").css("background-color", "royalblue");
+            $(".box2").css("color", "white");
+
+
+            let box3= $("a");
+            console.log(box3.text());
+            box3.attr("href","https://github.com/CodeMasterMitesh/Basic-JavaScript"); //attribute set
+            console.log(box3.attr("href"));  //attribute get
+             box3.text("codemastermitesh"); 
+
+
+            all =$("div").html("<a href='www.google.com'>Google</a>");
+            
+
+
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>

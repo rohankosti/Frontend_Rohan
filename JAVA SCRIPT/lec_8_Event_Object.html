@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHNAGE THE BODY COLOR </title>
+</head>
+
+<body>
+
+    <div>CHNAGE THE BODY COLOR </div>
+
+    <script>
+
+       document.onmousemove = (e) => {
+            console.log(e.clientX);
+            console.log(e.clientY)
+
+            let perx = e.clientX / window.innerWidth * 100;
+            console.log(perx);
+
+            let pery = e.clientY / window.innerHeight * 100;
+            console.log(pery);
+
+            document.body.style = `background-color:hsl(${e.clientX} ${perx} ${pery})`;
+        };
+
+    </script>
+</body>
+</html>

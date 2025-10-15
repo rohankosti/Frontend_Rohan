@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Events IN Jquery</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            margin: auto;
+        }
+        form{
+            margin: 50px    ;
+        }
+        .errors{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<form action="">
+
+    <label for="">Name</label>
+    <input type="text" name="name" id="name">
+    <label for="">Email</label>
+    <input type="email" name="email" id="email">
+    <label for="">City Name</label>
+    <select name="cityName" id="cityName">
+        <option value="None">Select Any One</option>
+        <option value="Ahmedabad">Ahmedabad</option>
+        <option value="Rajkot">Rajkot</option>
+        <option value="Baroda">Baroda</option>
+        <option value="Jamnagar">Jamnagar</option>
+    </select>
+    <input type="submit" value="Submit">
+</form>
+<div class="text"></div>
+<div class="details"></div>
+<div class="errors"></div>
+
+<script src="J_QUERY.js/jquery.js"></script>
+<script>
+$(document).ready(function(){
+    let errors = $(".errors");
+    let details = $(".details");
+    // $("#name").keydown(function(e){
+    //     // console.log(e.key);
+            // let nameVal = $("#name").val();
+    //     let username = "@" + nameVal + nameVal.length;
+    //     $(".text").text(username);
+    // });
+    $("#name").blur(function(e){
+        let nameVal = $("#name").val();
+        if(nameVal == ""){
+            $("#name").focus();
+        }
+        let username = "@" + nameVal + nameVal.length;
+        $(".text").text(username);
+    });
+    // $("#name").keyup(function(e){
+    //     // console.log(e.key);
+    //     let nameVal = $("#name").val();
+    //     let username = "@" + nameVal + nameVal.length;
+    //     $(".text").text(username);
+    // });
+    // $("#name").keypress(function(e){
+    //     // console.log(e.key);
+    //     let nvalue = $("#name").val();
+    //     // console.log(nvalue);
+    //     $(".text").text(nvalue);
+    // });
+
+    $("#cityName").change(function(e){
+        let nvalue = $("#name").val();
+        let evalue = $("#email").val();
+        let city = $("#cityName").val();
+       if(nvalue == "" || evalue == ""){
+            errors.text("Kindly Fill Name and Email.");
+            details.html("");
+       }else{
+            details.html(`Your Name Is <b> ${nvalue}.</b> and Your Email Id is ${evalue} and Your City cityname is ${city}.`);
+            errors.text("");
+       }
+    });
+});
+</script> 
+</body>
+</html>

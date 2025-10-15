@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inline vs Block Elements</title>
+    <style>
+        .block {
+            background-color: lightblue;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .inline {
+            background-color: lightgreen;
+            padding: 5px;
+        }
+        .p{
+          background-color: red;
+        }
+        #Audio{
+            background-color: darkred;
+        }
+        .audio{
+            background-color: rgb(0, 139, 95);
+        }
+        .audio{
+            background-color: rgb(0, 139, 95);
+        }
+        .audio{
+            background-color: rgb(0, 139, 95);
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Block Elements</h2>
+    <div class="block">This is a &lt;div&gt; block element.</div>
+    <p class="block">This is a &lt;p&gt; block element.</p>
+
+    <h2>Inline Elements</h2>
+    <p class="p">
+        This is a sentence with 
+        <span class="inline">inline &lt;span&gt;</span> 
+        and 
+        <a href="#" class="inline">inline &lt;a&gt;</a> 
+        elements.
+        
+    </p>    
+ 
+    <h1> Audio / Video & IFrame Tag Example...</h1>
+    <main>
+        <div id="Audio">
+            <h1 class="audio">Audio Area hear...</h1>
+            <audio controls src="1..mp3" height="50" width="50"></audio>
+
+            <h2 class="audio">Video Area hear...</h2><p class="audio">Can't Work</p>
+            <video controls src="https://youtu.be/Z3m0eWcP8n8?si=IxABBVmw6veAzB-u" height="200" width="400" loop autoplay preload="auto"></video>
+
+            <h3 class="audio">IFrame Video Area hear...</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Z3m0eWcP8n8?si=IxABBVmw6veAzB-u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </main>
+   
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="shortcut icon" href="IMG]/Git_Hub.jpeg" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/bootstrap-5.3.7/bootstrap-5.3.7/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4cdd077a78.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+
+<body>
+    <div id="loader" class="d-flex justify-content-center align-items-center"
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: white; z-index: 9999;">
+        <div class="spinner-grow text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-secondary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-success" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-danger" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-lg fixed-top" data-aos="fade-down" data-aos-duration="1000">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="/IMG]/Git_Hub.jpeg" alt="Logo" class="rounded-5 img-fluid" width="55" height="52">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-dark fs-5 fw-semibold" id="home" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fs-5 fw-semibold" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fs-5 fw-semibold" href="service.html">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fs-5 fw-semibold" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fs-5 fw-semibold" href="contact.html">Contact Us</a>
+                    </li>
+                    <!-- Toggle Icon -->
+                    <div class="position-fixed top-0 end-0 p-3 z-5">
+                        <i class="bg_change fa-solid fa-toggle-on fa-2xl" style="color: #000000;"></i>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar End -->
+
+    <!-- Carousel Start -->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up"
+        data-aos-duration="1200">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="IMG]/img.jpg" class="d-block w-100 img-fluid" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+                <img src="IMG]/img2.jpg" class="d-block w-100 img-fluid" alt="Slide 2">
+            </div>
+            <div class="carousel-item">
+                <img src="IMG]/img3.jpg" class="d-block w-100 img-fluid" alt="Slide 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- Carousel End -->
+    <!-- Blog Section Start -->
+    <section class="py-5" id="blog">
+        <div class="container" data-aos="fade-up" data-aos-duration="1000">
+            <!-- Section Title -->
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <p class="fs-2 fw-semibold border-bottom border-primary d-inline-block">Blog</p>
+                </div>
+            </div>
+
+            <!-- Blog Cards Row 1 -->
+            <div class="row row-cols-1 row-cols-md-3 g-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="col">
+                    <div class="card h-100 shadow-sm all_card">
+                        <img src="IMG]/img5.jpg" class="card-img-top img-fluid" alt="Mobile Development">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Mobile Development</h5>
+                            <p class="card-text">Mobile app development often raises the question of choosing between
+                                native and hybrid apps. Native apps offer better performance, while hybrid apps save
+                                cost and time.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm all_card">
+                        <img src="IMG]/responshive.jpg" class="card-img-top img-fluid" alt="Responsive Web Design">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Responsive Web Design</h5>
+                            <p class="card-text">A responsive website adapts to all devices, from mobiles to desktops.
+                                It improves user experience and is crucial for SEO ranking.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Last updated 10 hours ago</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm all_card">
+                        <img src="IMG]/sql.jpg" class="card-img-top img-fluid" alt="SQL vs NoSQL">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">SQL vs NoSQL</h5>
+                            <p class="card-text">Databases are the backbone of every application. SQL is structured and
+                                reliable, while NoSQL offers flexibility and scalability.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Last updated 2 days ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Cards Row 2 -->
+            <div class="row row-cols-1 row-cols-md-3 g-4 mt-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="col">
+                    <div class="card h-100 shadow-sm all_card">
+                        <img src="IMG]/graph.jpg" class="card-img-top img-fluid" alt="REST vs GraphQL">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">REST vs GraphQL</h5>
+                            <p class="card-text">APIs power modern apps by enabling communication between systems. REST
+                                has been the standard for years, but GraphQL offers more efficiency.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Last updated 7 days ago</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm all_card">
+                        <img src="IMG]/cloud.jpg" class="card-img-top img-fluid" alt="Cloud Computing">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Cloud Computing</h5>
+                            <p class="card-text">Cloud computing is transforming how businesses operate. It provides
+                                scalability, security, and cost-effectiveness compared to traditional infrastructure.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Last updated 7 months ago</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm all_card">
+                        <img src="IMG]/cyber.jpg" class="card-img-top img-fluid" alt="Cybersecurity Basics">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Cybersecurity Basics</h5>
+                            <p class="card-text">With rising cyber threats, security is more important than ever. Users
+                                and businesses must protect their data with strong passwords, encryption, and firewalls.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Last updated 9 months ago</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm all_card">
+                        <img src="IMG]/devops.jpg" class="card-img-top img-fluid" alt="DevOps">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">DevOps – Bridging Development and Operations</h5>
+                            <p class="card-text">DevOps is a modern approach that unites developers and IT operations.
+                                It ensures faster delivery, automation, and better collaboration.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Last updated 12 months ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End -->
+    <!-- Footer Area Start -->
+    <footer class="bg-light py-5" id="footer">
+        <div class="container" data-aos="fade-up" data-aos-duration="1000">
+            <div class="row gy-4">
+                <!-- Left Column: Brand Info -->
+                <div class="col-md-6 col-lg-4">
+                    <h1 class="mb-4">Landio</h1>
+                    <p class="fw-semibold fs-6">Crafting exceptional digital experiences through thoughtful design and
+                        innovative solutions that elevate your brand presence.</p>
+                    <p class="fw-semibold fs-6"><i class="fa-solid fa-location-dot fa-lg text-primary me-2"></i>123
+                        Creative Boulevard, District, NY 10012</p>
+                    <p class="fw-semibold fs-6"><i class="fa-solid fa-phone fa-lg text-primary me-2"></i>+1 (555)
+                        987-6543</p>
+                    <p class="fw-semibold fs-6"><i
+                            class="fa-solid fa-envelope fa-lg text-primary me-2"></i>hello@designstudio.com</p>
+                </div>
+
+                <!-- Right Column: Footer Links -->
+                <div class="col-md-6 col-lg-8">
+                    <div class="row text-start">
+                        <div class="col-6 col-md-3 mb-4">
+                            <p class="fw-semibold fs-5">Studio</p>
+                            <ul class="list-unstyled">
+                                <li>Our Story</li>
+                                <li>Design Process</li>
+                                <li>Portfolio</li>
+                                <li>Case Studies</li>
+                                <li>Awards</li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-3 mb-4">
+                            <p class="fw-semibold fs-5">Service</p>
+                            <ul class="list-unstyled">
+                                <li>Consultation</li>
+                                <li>Brand Identity</li>
+                                <li>Web Design</li>
+                                <li>Mobile Apps</li>
+                                <li>Digital Strategy</li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-3 mb-4">
+                            <p class="fw-semibold fs-5">Resources</p>
+                            <ul class="list-unstyled">
+                                <li>Design Blog</li>
+                                <li>Style Guide</li>
+                                <li>Free Assets</li>
+                                <li>Tutorials</li>
+                                <li>Inspiration</li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-3 mb-4">
+                            <p class="fw-semibold fs-5">Connect</p>
+                            <ul class="list-unstyled">
+                                <li>Start Project</li>
+                                <li>Schedule Call</li>
+                                <li>Portfolio</li>
+                                <li>Join Newsletter</li>
+                                <li>Partnership</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="row mt-4 align-items-center">
+                <div class="col-md-6 text-start">
+                    <p class="mb-0">© All rights reserved.</p>
+                </div>
+                <div class="col-md-6 d-flex justify-content-md-end justify-content-center gap-3">
+                    <a href="#" class="text-dark fs-6">Privacy Policy</a>
+                    <a href="#" class="text-dark fs-6">Terms of Service</a>
+                    <span>|</span>
+                    <span class="fs-6">Designed by <a href="#" class="text-primary">rohnakoshti</a></span>
+                </div>
+            </div>
+
+            <!-- Scroll to Top -->
+            <div class="text-end mt-3">
+                <a href="#">
+                    <i id="Home" class="scrollup fa-solid fa-arrow-up fa-md justify-content-start"
+                        style="color: white;"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+    <!-- <script src="app.js"></script> -->
+    <script src="/bootstrap-5.3.7/bootstrap-5.3.7/dist/js/bootstrap.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <script src="spiner.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // animation duration in ms
+            once: true      // whether animation should happen only once
+        });
+    </script>
+</body>
+
+</html>

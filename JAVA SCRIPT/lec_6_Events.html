@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button {
+        height: 30px;
+        width: 100px;
+        border-style: none;
+        background-color: rgb(243, 189, 243);
+        color: cadetblue;
+    }
+
+    .box1 {
+        height: 200px;
+        width: 200px;
+        border: 2px solid black;
+        background-color: rgb(199, 194, 194);
+        color: green;
+    }
+</style>
+
+<body>
+
+    <!-- 
+  dblckick
+  Mouseover
+  keyup
+  keydown
+  submit -->
+    <h1>Event Example With Functions</h1>
+
+    <button class="box" onclick="Fun1()">Click Me</button>
+
+    <button class="box2" onclick="Fun2()">Remove Me</button>
+
+
+
+
+    <script>
+        //* Use Function to Change The box effect
+        function Fun1() {
+            let box = document.querySelector("button");
+            console.log(box);
+
+            box.classList.add("box1");
+
+        }
+        function Fun2() {
+            let box2 = document.querySelector("button");
+            console.log(box2);
+            box2.classList.remove("box1");
+
+        }
+
+
+          //* Use addEventListener:-
+        //use addEventListener method do note create function becouse alredy taken have 2 parametr(event,function)\
+        //inline js na likhi ho to eventlistner ka use 
+             let listner= document.querySelector("h1");
+         listner.addEventListener("click",()=>{
+              listner.classList.add("box1");
+         })
+
+
+
+        //* Normal Function Call With EventListener:-
+
+        //  function listfunc() {
+        //     listner.classList.add("box1");
+        //  }
+
+        //  listner.addEventListener("click",listfunc);
+
+         
+
+         
+         
+
+         
+          
+
+
+    </script>
+</body>
+
+</html>

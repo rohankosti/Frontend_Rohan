@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        height: 200px;
+        width: 200px;
+        background-color: rgb(156, 26, 26);
+        border: 2px solid black;
+    }
+
+    .box2 {
+        height: 200px;
+        width: 200px;
+        background-color: aquamarine;
+        border: 2px solid black;
+    }
+</style>
+
+<body>
+    <h1>FUNCTION EXAMPLE IN JAVA SCRIPT</h1>
+
+    <div class="box" onclick="func1(),func2()">
+        This Is A Box
+    </div>
+
+    <button>Click Me</button>
+    <button>Remove Me</button>
+
+    <script>
+
+        //1.) Basic Function
+        function func1() {
+            let func = document.querySelector("div");
+             console.log(func);
+            func.classList.add("box2");
+        }
+        function func2() {
+            let funcnew = document.querySelector("div");
+            // console.log(func);
+            funcnew.classList.remove("box2");
+        }
+        func1();
+
+
+        //2.) parameter Function
+        function sum(x, y) {
+            console.log("Sum of Two Number", x + y);
+        }
+        sum(5, 5);
+
+        // parameter function
+        function sum(name, time) {
+            console.log("Hello", name, "Good   Morning");
+        }
+        sum("Rohan Koshti");
+
+        //3.) Arrow Function with parameter
+        //   Arrow function mate ene ek variable ma store krvo pde
+        let name = (x) => {
+
+            console.log(x);
+            // return "Heloo Rohan";
+        }
+         name("dsd");
+        // console.log(name());
+
+
+
+
+
+        
+
+    </script>
+</body>
+
+</html>

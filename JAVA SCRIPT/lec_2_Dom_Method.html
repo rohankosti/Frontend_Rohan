@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom_Method</title>
+</head>
+
+<body>
+    <!-- 
+    1) document.getElementById();
+    2) document.getElementsByClassName();
+    3) document.getElementsByTagName();
+    4) document.querySelector();
+    4) document.querySelectorAll(); 
+    -->
+
+
+    <h1 id="head">Dom Method</h1>
+
+    <div id="mainid">Documrnt Object Model</div>
+    <div> Lorem ipsum dolor sit amet.</div>
+
+
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, officia.</p>
+    <p class="para">Rohan ipsum dolor sit amet, consectetur adipisicing elit. Facilis, officia. </p>
+    <p class="para">Koshti ipsum dolor sit amet, consectetur adipisicing elit. Facilis, officia.</p>
+    <p class="para">Tyagi ipsum dolor sit amet, consectetur adipisicing elit. Facilis, officia.</p>
+    <p class="para">Asish ipsum dolor sit amet, consectetur adipisicing elit. Facilis, officia.</p>
+    <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, officia.</p>
+    <p class="para">ipsum dolor sit amet, consectetur adipisicing elit. Facilis, officia.</p>
+
+
+    <script>
+
+        //  1.) Method 1 getElementById();
+        // let Id = document.getElementById("head");
+             
+        // console.log(Id);
+        // console.dir(Id);
+
+
+        //  2.) Method 2 getElementByclassname(); ane pn index array apvo pde
+        // let Class = document.getElementsByClassName("para");
+        // console.log(Class);
+        // console.dir(Class);
+
+        //  3.) Method 3 getElementsByTagName();
+        // let Tag = document.getElementsByTagName("div")[0].innerHTML=" <h4> This is a Div Tag </h4>";
+        // document.getElementById("mainid").innerHTML=" <h4> This is a Div Tag </h4>" ;
+        // console.log(Tag); 
+        //  console.dir(Tag);
+
+        //  4.) Method 4 querySelector(); Acsess by Class Id Tag etc..And Select First Element  
+        // let Query = document.querySelector(".para")[3].innerHTML ="this lodu";
+            //    document.getElementsByClassName("para")[3].innerHTML= "This is a Rohan Paragraph";
+        // console.log(Query);
+        // console.dir(Query);
+
+        //  5.) Method 5 querySelectorAll(); Acsess by Class Id Tag etc..And Select All Element Using Array
+        let QyeryAll = document.querySelectorAll(".para")[5].innerHTML = "This is a Rohan Paragraph";
+        // document.getElementsByClassName("para")[1].innerHTML = "This is a Rohan Paragraph";
+        console.log(QyeryAll);
+        // console.dir(QyeryAll);
+    </script>
+</body>
+
+</html>

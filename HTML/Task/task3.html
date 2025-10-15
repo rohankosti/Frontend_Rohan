@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3(Student Register Form)</title>
+    <style>
+        .table{
+            margin-left: 285px;
+            background-color: #583acdeb;
+            height: 570px;
+            width: 791px;
+            border: 2px solid black;
+            text-align: justify;
+        }
+        .h2{
+            color: #583acdeb;
+            text-align: center;
+            text-decoration:underline;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size:35px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="h2">Student Register Form</h2>
+    <div class="table">
+    <table border="1" style="text-align: center;">
+       
+       
+        <form action="" method="post">
+
+            <tr>
+                <th>Firsht Name:</th>
+                <td><input type="text" name="Firsht_Name" value="" placeholder="Firsht Name">(max 30 charachter a to z A
+                    to Z)</td>
+            </tr>
+
+            <tr>
+                <th>Last Name:</th>
+                <td><input type="text" name="Last_Name" value="" placeholder="Last Name">(max 30 charachter a to z A to
+                    Z)</td>
+            </tr>
+
+            <tr>
+                <th>Date of Birth:</th>
+                <td><input type="date" name="DOB" value=""></td>
+            </tr>
+
+
+            <tr>
+                <th>Email Id:</th>
+                <td><input type="email" name="email" value="" placeholder="ex@gmail.com"></td>
+            </tr>
+
+            <tr>
+                <th>Mobile Number:</th>
+                <td><input type="text" name="Mobile_no" value="" placeholder="Enter Mobile Number"></td>
+            </tr>
+
+            <tr>
+                <th>Addresh:</th>
+                <td><textarea name="Addresh" rows="5" cols="50">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias natus facere omnis, similique dignissimos doloribus?</textarea></td>
+            </tr>
+
+            <tr>
+                <th>City:</th>
+                <td><select name="City">
+                        <option name="None" disabled>None</option>
+                        <option name="Bapunagar">Bapunagar</option>
+                        <option name="Nikol">Niko</option>
+                        <option name="Satelite">Satelite</option>
+
+                    </select></td>
+            </tr>
+
+            <tr>
+                <th>PinCode:</th>
+                <td><input type="text" name="PinCode" value="">(6 Digit Numer)</td>
+            </tr>
+
+
+            <tr>
+                <th>State:</th>
+                <td><select name="State">
+                        <option name="None" disabled>None</option>
+                        <option name="Bapunagar">Gujrat</option>
+                        <option name="Nikol">Delhi</option>
+                        <option name="Satelite">Mumbai</option>
+
+                    </select></td>
+            </tr>
+
+
+            <tr>
+                <th>Country:</th>
+                <td><select name="Country">
+                        <option name="None" disabled>None</option>
+                        <option name="Bapunagar">IND</option>
+                        <option name="Nikol">U.S</option>
+                        <option name="Satelite">U.A.E</option>
+
+                    </select></td>
+            </tr>
+
+            <tr>
+                <th>Hobbies:</th>
+                <td>
+                    Drawing<input type="checkbox" name="Hobbies" value="Drawing">
+                    Singing<input type="checkbox" name="Hobbies" value="Singing">
+                    Sketching<input type="checkbox" name="Hobbies" value="Sketching">
+                    Dancing<input type="checkbox" name="Hobbies" value="Dancing"> <br>
+                    Other <input type="checkbox" name="Hobbies" value="Other">
+                    <input type="text" name="Firsht_Name" value="">
+
+                </td>
+            </tr>
+
+
+            <tr>
+                <th>Qualofication:</th>
+                <td>
+                    <table border="1">
+                        <tr>
+                            <th>Sr.No.Examination</th>
+                            <th>Board</th>
+                            <th>Percentage</th>
+                            <th>Year Of Passing</th>
+                        </tr>
+
+                        <tr>
+                            <td>1.Class X</td>
+                            <td><label for=""></label><input type="text" value="" name=""></td>
+                             <td><label for=""></label><input type="text" value="" name=""></td>
+                              <td><label for=""></label><input type="text" value="" name=""></td>
+                            
+                        </tr>
+                        <tr>
+                            <td>2.Class XII</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>3.Master</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>4.Greduation</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+
+            </tr>
+
+
+    </table>
+    </td>
+    </tr>
+
+    <tr>
+        <th>Courses<br> Applied For:</th>
+        <td>
+            BCA<input type="radio" name="Courses" value="BCA">
+            MCA<input type="radio" name="Courses" value="MCA">
+            B.TECH<input type="radio" name="Courses" value="B.TECH">
+            BSC.IT<input type="radio" name="Courses" value="BSC.IT"> <br>
+        </td>
+    </tr>
+
+    <td style="text-align: center;" colspan="2"> <input type="submit" name="submit" value="Submit">
+        <input type="reset" name="reset" value="Reset">
+    </td>
+    </form>
+    </table>
+    </div>
+</body>
+
+</html>

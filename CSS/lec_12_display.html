@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar in CSS</title>
+    <link rel="icon"
+        href="https://w7.pngwing.com/pngs/290/579/png-transparent-html-html-logo-html-5-html-five-logo-html-5-logo-programming-langugae-3d-icon-thumbnail.png"
+        type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Nosifer&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        body {
+            background-color: white;
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            /* background-color: aliceblue; */
+            /* box-sizing: border-box; */
+        }
+
+        .h3 {
+            /* background-color: bisque;  */
+            color: black;
+            height: auto;
+            max-width: fit-content;
+            text-align: center;
+            font-size: 25px;
+            text-shadow: -4px -1px 0px #963ea1;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,
+                sans-serif;
+            margin-left: 666px;
+            margin-top: 35px;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        nav {
+            background-color: aquamarine;
+            max-width: 100%;
+            margin-top: 10px;
+            height: 60px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+
+
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 10px;
+            margin-left: 700px;
+            text-align: center;
+            word-spacing: 11px;
+            line-height: 0px;
+        }
+
+
+        li {
+            text-align: right;
+            display: inline-block;
+            margin: 20px;
+            font-size: 25px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,
+                sans-serif;
+
+        }
+
+        a:hover {
+            color: #c7c7c7;
+            background-color: #1a1c10;
+        }
+
+        .img {
+            height: 35px;
+            margin-bottom: -60px;
+            /* background-color: aquamarine;
+            color: aquamarine; */
+        }
+
+        .div {
+            height: 300px;
+            width: 500px;
+            border: 2px solid rgba(173, 81, 193, 0.92);
+            outline: 10px groove rgb(70 63 146 / 87%);
+            outline-offset: 3px;
+
+
+        }
+
+        .div:hover {
+            /* background-color: rgb(10, 73, 231); */
+            outline-color: rgb(233, 10, 211);
+        }
+
+        .h31 {
+            background-color: bisque;
+            height: 50px;
+            text-align: center;
+            padding-top: 30px;
+            /* display: block; */
+            border: 2px solid black;
+            color: black;
+            font-size: 25px;
+            font-family: "Nosifer", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            text-shadow: -4px -1px 0px #b709ce;
+
+        }
+
+        .section {
+            border: 2px black rgb(231, 16, 16);
+            /* padding: 1px; */
+            background-color: bisque;
+            min-height: 500px;
+            display: inline-block;
+        }
+
+        .div1 {
+            margin-bottom: 100px;
+            display: inline-block;
+        }
+
+        .div2 {
+            margin-bottom: 100px;
+            display: inline-block;
+        }
+
+        .div3 {
+            margin-bottom: 100px;
+            display: inline-block;
+        }
+
+        .div4 {
+            margin-bottom: 100px;
+            display: inline-block;
+        }
+
+        .div5 {
+            margin-bottom: 100px;
+            display: inline-block;
+        }
+
+        .div6 {
+            margin-bottom: 100px;
+            display: inline-block;
+        }
+
+        .div7 {
+            margin-bottom: 100px;
+            display: inline-block;
+        }
+
+        .div8 {
+            margin-bottom: 100px;
+            display: inline-block;
+        }
+
+        .div9 {
+            margin-bottom: 100px;
+            display: inline-block;
+        }
+
+        .div10 {
+            margin-bottom: 100px;
+            display: inline-block;
+        }
+
+        .div11 {
+            margin-bottom: 100px;
+            display: inline-block;
+        }
+
+        .div12 {
+            margin-bottom: 100px;
+            display: inline-block;
+        }
+
+        .div13 {
+            margin-bottom: 100px;
+            display: inline-block;
+        }
+
+        .div14 {
+            margin-bottom: 100px;
+            display: inline-block;
+        }
+
+        .div15 {
+            margin-bottom: 100px;
+            display: inline-block;
+        }
+
+        .imgd {
+            background-color: bisque;
+            color: rgb(0, 0, 0);
+            min-height: 30px;
+            min-width: 250px;
+            /* border: 2px solid black; */
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            padding: 20px;
+            margin: auto;
+            text-align: center;
+            position: static;
+            word-spacing: -1px;
+            /* bottom: 50px; */
+        }
+
+        .imgd:hover {
+            background-color: goldenrod;
+            color: black;
+        }
+
+        .footer {
+
+            background-color: #ab9898;
+            height: 100px;
+            margin-bottom: 50px;
+            text-align: center;
+            padding-top: 90px;
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,
+                sans-serif;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h3 class="h3">Navbar In Css</h3>
+
+    <img src="data:image/png;base64,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"
+        class="img">
+    <nav>
+        <ul>
+            <li><a href="#">Home </a></li>
+            <li><a href="#">About</a> </li>
+            <li><a href="#">Service</a> </li>
+            <li><a href="#">Contact Us </a></li>
+        </ul>
+    </nav>
+
+
+    <h3 class="h31">Wallpaper Gallery</h3>
+
+    <section class="section">
+
+        <div class="div1">
+            <img src="C:\Users\kosht\OneDrive\Pictures\porsche-911-targa_1539108158.jpg.webp" title="Porche_911GT"
+                class="div">
+            <p class="imgd">Porsche was designed to turn heads and hearts.</p>
+        </div>
+
+        <div class="div2">
+            <img src="C:\Users\kosht\OneDrive\Pictures\20238594370_72b544330f_o.jpg" title="Maclearn" class="div">
+            <p class="imgd">McLaren is a British luxury manufactur sport car .</p>
+        </div>
+
+        <div class="div3">
+            <img src="C:\Users\kosht\OneDrive\Pictures\free-photo-of-ford-mustang-mach-1-against-industrial-brick-wall.jpeg.jpg"
+                title="Mustang_Gt" class="div">
+            <p class="imgd">Ford Mustang powered by 5.0-liter Ti-VCT V8 engine .</p>
+        </div>
+
+        <div class="div4">
+
+            <img src="C:\Users\kosht\OneDrive\Pictures\lamborghini-aventador-green-4k_1539104783.jpg.webp"
+                title="Lemborghini" class="div">
+            <p class="imgd">Huracán sport car known for powerful V10 engine .</p>
+        </div>
+
+        <div class="div5">
+            <img src="C:\Users\kosht\OneDrive\Pictures\1356296.png" title="Lighting_Macqueen" class="div">
+            <p class="imgd">Cars 2 animated spy comedy film Lightning McQueen.</p>
+        </div>
+
+        <div class="div6">
+            <img src="C:\Users\kosht\OneDrive\Pictures\pexels-photo-3608542.jpeg.jpg" title="Doge_Challenger"
+                class="div">
+            <p class="imgd">Dodge Challenger is a popular American muscle car .</p>
+        </div>
+
+        <div class="div7">
+            <img src="C:\Users\kosht\OneDrive\Pictures\premium_photo-1686515847297-8f25e451fe9c.jpg" title="Spider_man"
+                class="div">
+            <p class="imgd">This Is A Img Description .</p>
+        </div>
+        <div class="div8"> <img
+                src="C:\Users\kosht\OneDrive\Pictures\macbook-air-4k-mountain-range-shadows-98w1uvmncbknh4gc.jpg"
+                title="Spider_man" class="div">
+            <p class="imgd">This Is A Img Description .</p>
+        </div>
+        <div class="div9"> <img
+                src="C:\Users\kosht\OneDrive\Pictures\WhatsApp Image 2025-04-28 at 14.47.21_28be2316.jpg"
+                title="Spider_man" class="div">
+            <p class="imgd">This Is A Img Description .</p>
+        </div>
+
+
+        <div class="div10"> <img
+                src="C:\Users\kosht\OneDrive\Pictures\stranger-things-children-wallpaper-1600x900_47.jpg"
+                title="Spider_man" class="div">
+            <p class="imgd">This Is A Img Description .</p>
+        </div>
+        <div class="div11"> <img
+                src="C:\Users\kosht\OneDrive\Pictures\wallpapersden.com_kokushibou-art-demon-slayer_2560x1440.jpg"
+                title="Spider_man" class="div">
+            <p class="imgd">This Is A Img Description .</p>
+        </div>
+        <div class="div12"> <img
+                src="C:\Users\kosht\OneDrive\Pictures\WhatsApp Image 2024-06-13 at 16.01.55_722f2ce3.jpg"
+                title="Spider_man" class="div">
+            <p class="imgd">This Is A Img Description .</p>
+        </div>
+
+
+        <div class="div13"> <img src="C:\Users\kosht\OneDrive\Pictures\1367490.jpeg" title="Spider_man" class="div">
+            <p class="imgd">This Is A Img Description .</p>
+        </div>
+        <div class="div14"> <img
+                src="C:\Users\kosht\OneDrive\Pictures\WhatsApp Image 2025-04-28 at 14.47.12_5f0861b6.jpg"
+                title="Spider_man" class="div">
+            <p class="imgd">This Is A Img Description .</p>
+        </div>
+        <div class="div15"> <img src="C:\Users\kosht\OneDrive\Pictures\500857.jpg" title="Spider_man" class="div">
+            <p class="imgd">This Is A Img Description .</p>
+        </div>
+
+
+    </section>
+
+    <footer>
+        <div class="footer">
+            <a href="#">
+
+                <p>Powred By @2025 Copy.</p>
+            </a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

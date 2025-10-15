@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table With Form</title>
+</head>
+<body>
+    <h1 style="text-align: center;"> Table Form</h1>
+    <table border="1">
+        <form action="" method="post">
+          <tr>
+            <th colspan="1">Name</th>
+            <th colspan="2">Value</th>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td><input type="text" ></td>
+          </tr>
+          <tr>
+            <td>Sex</td>
+            <td>Male<input type="radio"name="Sex" value="Male"><br>
+            Female<input type="radio"name="Sex" value="Female"></td>
+          </tr>
+          <tr>
+            <td>Eye Color</td>
+            <th><select name="Eye color">
+                <option name="None" disabled>None</option>
+                <option name="Red">Red</option>
+                <option name="Yellow">Yellow</option>
+                <option name="Orange">Orange</option>
+            </selection></th>
+          </tr>
+          <tr>
+            <td>Cheque all that apply</td>
+            <td>Over 6 feet tall<input type="checkbox" name="Cheque all that apply" value="over 6 feet tall"><br>
+                Over 200 pounds <input type="checkbox" name="Cheque all that apply" value="over 200 pounds">
+          </tr>
+          <tr>
+            <td>Describe your athletic ability:</td>
+            <th>
+            <textarea rows="5" cols="30"></textarea></th>
+           
+          </tr>
+          <tr>
+            <th style="text-align: center;" colspan="2"> <input type="button" value="Enter my information"</th>
+          </tr>
+        
+        </form>
+    </table>
+</body>
+</html>
