@@ -37,6 +37,12 @@
             else if (email.value.length <= 0) {
                 alert("Email Is Reqiured");
                 email.focus();
+
+
+            }
+            else if (!email.value.includes(".com")) {
+                 alert("Email format can be match")
+                 email.focus()
             }
             else if (mobile.value.length <= 0 || mobile.value.length > 10) {
                 alert("Mobile Number Is Required");

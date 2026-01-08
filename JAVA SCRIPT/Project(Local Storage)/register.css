@@ -1,37 +1,139 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Background */
 body {
-  font-family: Calibri;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-input[type="text"] {
-  width: 250px;
-}
-
-input[type="submit"],
-input[type="reset"] {
-  width: 77px;
-  height: 27px;
-  position: relative;
-  left: 180px;
-}
-
-form {
+/* Heading */
+h1 {
+  color: #fff;
   text-align: center;
-  font-family: Calibri;
-  font-size: 20px;
-  border: 3px solid black;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+hr {
+  width: 80%;
+  border: none;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  margin-bottom: 30px;
+}
+
+/* Form Container */
+form {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 40px 50px;
   width: 600px;
-  margin: 20px auto;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
-td {
-  padding: 10px;
+/* Title */
+form h2 {
+  text-align: center;
+  margin-bottom: 25px;
 }
 
-td:first-child {
-  text-align: right;
+/* Form Group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+/* Input Fields */
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form textarea,
+form select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+/* Focus effects */
+form input:focus,
+form textarea:focus,
+form select:focus {
+  box-shadow: 0 0 10px #00c6ff, 0 0 20px #0072ff;
+  transform: scale(1.02);
+}
+
+/* Gender */
+.gender-group {
+  display: flex;
+  gap: 15px;
+}
+
+.gender-group input {
+  accent-color: #ff5e62;
+}
+
+/* Buttons */
+form button,
+form input[type="reset"] {
+  width: 30%;
+  padding: 12px 0;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
   font-weight: bold;
+  cursor: pointer;
+  margin-left:60px;
+  transition: all 0.3s ease;
 }
 
-td:last-child {
-  text-align: left;
+/* Submit button */
+form button {
+  background: linear-gradient(90deg, #ff9966, #ff5e62);
+  color: #fff;
+}
+
+form button:hover {
+  background: linear-gradient(90deg, #ff5e62, #ff9966);
+  transform: scale(1.03);
+}
+
+/* Reset button */
+form input[type="reset"] {
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+}
+
+form input[type="reset"]:hover {
+  background: #fff;
+  transform: scale(1.03);
+}
+
+/* Placeholder */
+::placeholder {
+  color: #777;
+  font-size: 14px;
 }
