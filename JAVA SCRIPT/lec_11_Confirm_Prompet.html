@@ -22,21 +22,21 @@
 
         //   document.querySelector("div").innerText=prom;
 
-        if (prom == null) {
-            document.querySelector("div").append("Enter A Valid Number !");
-        }
-        else {
-            document.querySelector("div").append(prom * prom);
-            //   document.querySelector("div").innerText= "@" + prom + prom.length;
-        }
-
-        // if (prom==null) {
-        //     document.querySelector(".div")
-        //     .innerText="Enter A Valid Number";
-
-        // } else {
-        //     document.querySelector(".div").innerText=(prom*prom);
+        // if (prom == null) {
+        //     document.querySelector("div").innerText="Enter A Valid Number !";
         // }
+        // else {
+        //     document.querySelector("div").append(prom * prom);
+        //     //   document.querySelector("div").innerText= "@" + prom + prom.length;
+        // }
+
+        if (prom==null) {
+            document.querySelector(".div")
+            .innerText="Enter A Valid Number";
+
+        } else {
+            document.querySelector(".div").innerText=(prom*prom);
+        }
 
         let conf = document.querySelector("button");
 
